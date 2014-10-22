@@ -243,6 +243,7 @@
 		AA2A141021211605AA0000FD /* SdFatmainpage.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141021211605AA0000FD /* SdFatmainpage.h */; };
 		F425FFA219F73C1F0014C238 /* LocalLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = F435FFA219F73C1F0014C238 /* LocalLibrary.h */; };
 		F425FFF319F73C200014C238 /* Amur.ino in Sources */ = {isa = PBXBuildFile; fileRef = F435FFF319F73C200014C238 /* Amur.ino */; };
+		F435000A19F74B590014C238 /* Conductor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F435000819F74B590014C238 /* Conductor.cpp */; };
 		F435FF9F19F73C1F0014C238 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F435FF9E19F73C1F0014C238 /* main.cpp */; };
 		F435FFA119F73C1F0014C238 /* LocalLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F435FFA019F73C1F0014C238 /* LocalLibrary.cpp */; };
 /* End PBXBuildFile section */
@@ -483,6 +484,8 @@
 		AAAA141021211605AA0000FC /* SdFat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SdFat.h; sourceTree = "<group>"; };
 		AAAA141021211605AA0000FD /* SdFatmainpage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SdFatmainpage.h; sourceTree = "<group>"; };
 		F435000619F73E750014C238 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		F435000819F74B590014C238 /* Conductor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Conductor.cpp; sourceTree = "<group>"; };
+		F435000919F74B590014C238 /* Conductor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conductor.h; sourceTree = "<group>"; };
 		F435FF9B19F73C1F0014C238 /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
 		F435FF9E19F73C1F0014C238 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F435FFA019F73C1F0014C238 /* LocalLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LocalLibrary.cpp; sourceTree = "<group>"; };
@@ -968,6 +971,15 @@
 			path = ../../../../../Documents/Arduino/libraries;
 			sourceTree = "<group>";
 		};
+		F435000719F74B0C0014C238 /* Timing */ = {
+			isa = PBXGroup;
+			children = (
+				F435000819F74B590014C238 /* Conductor.cpp */,
+				F435000919F74B590014C238 /* Conductor.h */,
+			);
+			name = Timing;
+			sourceTree = "<group>";
+		};
 		F435FF9019F73C1F0014C238 = {
 			isa = PBXGroup;
 			children = (
@@ -987,6 +999,7 @@
 		F435FF9D19F73C1F0014C238 /* Amur */ = {
 			isa = PBXGroup;
 			children = (
+				F435000719F74B0C0014C238 /* Timing */,
 				F435FF9E19F73C1F0014C238 /* main.cpp */,
 				F435FFA019F73C1F0014C238 /* LocalLibrary.cpp */,
 				F435FFA219F73C1F0014C238 /* LocalLibrary.h */,
@@ -1386,6 +1399,7 @@
 				AA2A141021211605AA0000AB /* GSM3ShieldV1SMSProvider.cpp in Sources */,
 				AA2A141021211605AA0000AC /* GSM3ShieldV1SMSProvider.h in Sources */,
 				AA2A141021211605AA0000AD /* GSM3ShieldV1VoiceProvider.cpp in Sources */,
+				F435000A19F74B590014C238 /* Conductor.cpp in Sources */,
 				AA2A141021211605AA0000AE /* GSM3ShieldV1VoiceProvider.h in Sources */,
 				AA2A141021211605AA0000AF /* GSM3SMSService.cpp in Sources */,
 				AA2A141021211605AA0000B0 /* GSM3SMSService.h in Sources */,

@@ -9,4 +9,4 @@ Builds/main.o: main.cpp \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Printable.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/new.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/standard/pins_arduino.h \
-  Amur.ino LocalLibrary.h
+  Amur.ino LocalLibrary.h Conductor.h
