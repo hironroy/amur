@@ -22,11 +22,6 @@ void Hitter::begin(int _hitDuration, byte _inputPin,  byte _outputPin){
     
     pinMode(outputPin, OUTPUT);
     pinMode(inputPin, INPUT);
-    
-    Serial.println("Hit Duration:");
-    Serial.println(hitDuration);
-    Serial.println("Sample Interval:");
-    Serial.println(amurIO.sampleInterval);
 }
 
 void Hitter::handleInterval(){
@@ -47,17 +42,16 @@ void Hitter::handleInterval(){
         msSinceLastHit = 0;
     }
     else if(isDoingHit){
-        Serial.println("Continued Hit Handling");
 
         amurIO.pushTrigger(outputPin);
         
         msSinceLastHit += amurIO.sampleInterval;
-        Serial.println(msSinceLastHit);
 
         if(msSinceLastHit >= hitDuration){
             isDoingHit = false;
             msSinceLastHit = 0;
             amurIO.lowTrigger(outputPin);
+            Serial.println("Hit Over");
         }
     }
     else{
