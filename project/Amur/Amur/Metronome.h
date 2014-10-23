@@ -25,4 +25,5 @@ private:
 };
 
 extern Metronome metronome;
+extern void amurMetronomeHandleInterval();
 #endif /* defined(__Amur__Metronome__) */

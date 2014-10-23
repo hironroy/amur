@@ -18,6 +18,7 @@ public:
     int getTempoPotVal();
     void metronomeLEDOn();
     void metronomeLEDOff();
+    int sampleInterval;
 private:
     //Inputs
     byte m_metronome;  //Analog input for Metronome Speed

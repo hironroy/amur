@@ -12,9 +12,11 @@ AmurIO amurIO;
 
 AmurIO::AmurIO(){
     m_metronome = A0;
-    
     m_metronome_led = 7;
     pinMode(m_metronome_led, OUTPUT);
+
+    //say that the sample interval is 8ms
+    sampleInterval = 8;
 }
 
 int AmurIO::getTempoPotVal(){

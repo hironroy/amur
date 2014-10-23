@@ -60,10 +60,18 @@
 //byte m_morse_led1 = 9;     // morse 1
 //byte m_morse_led2 = 12 ;   // morse 2
 
-int sensorValue = 0;
+
+void runInterval();
 
 void setup() {
     Serial.begin(9600);      // open the serial port at 9600 bps:
+
+    tBeat.init();
+    
+    tBeat.newHook(amurIO.sampleInterval, runInterval);
+    
+    tBeat.start();
+
 
     //Setting up Pins
 //    pinMode(m_clear,INPUT);
@@ -78,21 +86,14 @@ void setup() {
 //    pinMode(m_morse_led2, OUTPUT);
     
 }
+
+void runInterval(){
+    amurMetronomeHandleInterval();
+}
+
 void loop() {
     
-    int currBPM = metronome.getCurrentBPM();
-    int currDelay = metronome.getCurrentDelay() / 2;
-
-    
-    Serial.println("BPM");
-    Serial.println(currBPM);
-    Serial.println("Delay");
-    Serial.println(currDelay);
-
-    amurIO.metronomeLEDOn();
-    delay(currDelay);
-    amurIO.metronomeLEDOff();
-    delay(currDelay);
+    tBeat.exec();
 
     
 //    //Testing Potentiometer and Metronome Led
