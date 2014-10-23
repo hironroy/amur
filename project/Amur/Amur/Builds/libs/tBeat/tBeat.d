@@ -1,4 +1,6 @@
-Builds/LocalLibrary.o: LocalLibrary.cpp LocalLibrary.h \
+Builds/libs/tBeat/tBeat.o:  \
+ /Users/hironroy/Documents/Arduino/libraries/tBeat/tBeat.cpp \
+  /Users/hironroy/Documents/Arduino/libraries/tBeat/tBeat.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Arduino.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/binary.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WCharacter.h \

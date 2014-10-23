@@ -241,11 +241,12 @@
 		AA2A141021211605AA0000FB /* Sd2PinMap.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141021211605AA0000FB /* Sd2PinMap.h */; };
 		AA2A141021211605AA0000FC /* SdFat.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141021211605AA0000FC /* SdFat.h */; };
 		AA2A141021211605AA0000FD /* SdFatmainpage.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141021211605AA0000FD /* SdFatmainpage.h */; };
-		F425FFA219F73C1F0014C238 /* LocalLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = F435FFA219F73C1F0014C238 /* LocalLibrary.h */; };
 		F425FFF319F73C200014C238 /* Amur.ino in Sources */ = {isa = PBXBuildFile; fileRef = F435FFF319F73C200014C238 /* Amur.ino */; };
 		F435000A19F74B590014C238 /* Conductor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F435000819F74B590014C238 /* Conductor.cpp */; };
 		F435FF9F19F73C1F0014C238 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F435FF9E19F73C1F0014C238 /* main.cpp */; };
-		F435FFA119F73C1F0014C238 /* LocalLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F435FFA019F73C1F0014C238 /* LocalLibrary.cpp */; };
+		F456760119F89609005C3FE8 /* Metronome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F45675FF19F89609005C3FE8 /* Metronome.cpp */; };
+		F4AD421819F87BF1005B699A /* tBeat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4AD421619F87BF1005B699A /* tBeat.cpp */; };
+		F4AD421C19F87D1D005B699A /* AmurIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4AD421A19F87D1D005B699A /* AmurIO.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -488,8 +489,6 @@
 		F435000919F74B590014C238 /* Conductor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conductor.h; sourceTree = "<group>"; };
 		F435FF9B19F73C1F0014C238 /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
 		F435FF9E19F73C1F0014C238 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		F435FFA019F73C1F0014C238 /* LocalLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LocalLibrary.cpp; sourceTree = "<group>"; };
-		F435FFA219F73C1F0014C238 /* LocalLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalLibrary.h; sourceTree = "<group>"; };
 		F435FFA319F73C1F0014C238 /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		F435FFA619F73C1F0014C238 /* Sketchbook.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = Sketchbook.txt; path = Sketchbook/Sketchbook.txt; sourceTree = "<group>"; };
 		F435FFA819F73C1F0014C238 /* 4D Systems PICadillo 35T.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "4D Systems PICadillo 35T.xcconfig"; path = "Configurations/4D Systems PICadillo 35T.xcconfig"; sourceTree = "<group>"; };
@@ -564,6 +563,16 @@
 		F435FFF119F73C200014C238 /* TemplateIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TemplateIcon.icns; path = Utilities/TemplateIcon.icns; sourceTree = "<group>"; };
 		F435FFF219F73C200014C238 /* clupload_osx.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = clupload_osx.sh; path = Utilities/clupload_osx.sh; sourceTree = "<group>"; };
 		F435FFF319F73C200014C238 /* Amur.ino */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; path = Amur.ino; sourceTree = "<group>"; };
+		F45675FF19F89609005C3FE8 /* Metronome.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Metronome.cpp; sourceTree = "<group>"; };
+		F456760019F89609005C3FE8 /* Metronome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metronome.h; sourceTree = "<group>"; };
+		F4AD421019F87BF1005B699A /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		F4AD421119F87BF1005B699A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F4AD421419F87BF1005B699A /* tBeatBlinker.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tBeatBlinker.ino; sourceTree = "<group>"; };
+		F4AD421519F87BF1005B699A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		F4AD421619F87BF1005B699A /* tBeat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tBeat.cpp; sourceTree = "<group>"; };
+		F4AD421719F87BF1005B699A /* tBeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tBeat.h; sourceTree = "<group>"; };
+		F4AD421A19F87D1D005B699A /* AmurIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AmurIO.cpp; sourceTree = "<group>"; };
+		F4AD421B19F87D1D005B699A /* AmurIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmurIO.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -965,6 +974,7 @@
 		F435000519F73E750014C238 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F4AD420F19F87BF1005B699A /* tBeat */,
 				F435000619F73E750014C238 /* readme.txt */,
 			);
 			name = libraries;
@@ -976,6 +986,8 @@
 			children = (
 				F435000819F74B590014C238 /* Conductor.cpp */,
 				F435000919F74B590014C238 /* Conductor.h */,
+				F45675FF19F89609005C3FE8 /* Metronome.cpp */,
+				F456760019F89609005C3FE8 /* Metronome.h */,
 			);
 			name = Timing;
 			sourceTree = "<group>";
@@ -999,10 +1011,9 @@
 		F435FF9D19F73C1F0014C238 /* Amur */ = {
 			isa = PBXGroup;
 			children = (
+				F4AD421919F87CFF005B699A /* Drivers */,
 				F435000719F74B0C0014C238 /* Timing */,
 				F435FF9E19F73C1F0014C238 /* main.cpp */,
-				F435FFA019F73C1F0014C238 /* LocalLibrary.cpp */,
-				F435FFA219F73C1F0014C238 /* LocalLibrary.h */,
 				F435FFA319F73C1F0014C238 /* Makefile */,
 				F435FFE819F73C200014C238 /* ReadMe.txt */,
 				F435FFF319F73C200014C238 /* Amur.ino */,
@@ -1123,6 +1134,44 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		F4AD420F19F87BF1005B699A /* tBeat */ = {
+			isa = PBXGroup;
+			children = (
+				F4AD421019F87BF1005B699A /* .gitattributes */,
+				F4AD421119F87BF1005B699A /* .gitignore */,
+				F4AD421219F87BF1005B699A /* Examples */,
+				F4AD421519F87BF1005B699A /* README.md */,
+				F4AD421619F87BF1005B699A /* tBeat.cpp */,
+				F4AD421719F87BF1005B699A /* tBeat.h */,
+			);
+			path = tBeat;
+			sourceTree = "<group>";
+		};
+		F4AD421219F87BF1005B699A /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				F4AD421319F87BF1005B699A /* tBeatBlinker */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		F4AD421319F87BF1005B699A /* tBeatBlinker */ = {
+			isa = PBXGroup;
+			children = (
+				F4AD421419F87BF1005B699A /* tBeatBlinker.ino */,
+			);
+			path = tBeatBlinker;
+			sourceTree = "<group>";
+		};
+		F4AD421919F87CFF005B699A /* Drivers */ = {
+			isa = PBXGroup;
+			children = (
+				F4AD421A19F87D1D005B699A /* AmurIO.cpp */,
+				F4AD421B19F87D1D005B699A /* AmurIO.h */,
+			);
+			name = Drivers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
@@ -1236,11 +1285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F435FF9F19F73C1F0014C238 /* main.cpp in Sources */,
-				F435FFA119F73C1F0014C238 /* LocalLibrary.cpp in Sources */,
-				F425FFA219F73C1F0014C238 /* LocalLibrary.h in Sources */,
 				F425FFF319F73C200014C238 /* Amur.ino in Sources */,
 				AA2A141021211605AA000005 /* Arduino.h in Sources */,
 				AA2A141021211605AA000007 /* malloc.c in Sources */,
+				F456760119F89609005C3FE8 /* Metronome.cpp in Sources */,
 				AA2A141021211605AA000008 /* realloc.c in Sources */,
 				AA2A141021211605AA000009 /* sectionname.h in Sources */,
 				AA2A141021211605AA00000A /* stdlib_private.h in Sources */,
@@ -1373,6 +1421,7 @@
 				AA2A141021211605AA000091 /* GSM3ShieldV1BandManagement.cpp in Sources */,
 				AA2A141021211605AA000092 /* GSM3ShieldV1BandManagement.h in Sources */,
 				AA2A141021211605AA000093 /* GSM3ShieldV1BaseProvider.cpp in Sources */,
+				F4AD421819F87BF1005B699A /* tBeat.cpp in Sources */,
 				AA2A141021211605AA000094 /* GSM3ShieldV1BaseProvider.h in Sources */,
 				AA2A141021211605AA000095 /* GSM3ShieldV1CellManagement.cpp in Sources */,
 				AA2A141021211605AA000096 /* GSM3ShieldV1CellManagement.h in Sources */,
@@ -1440,6 +1489,7 @@
 				AA2A141021211605AA0000D5 /* RobotSdCard.cpp in Sources */,
 				AA2A141021211605AA0000D6 /* SdCard.cpp in Sources */,
 				AA2A141021211605AA0000D7 /* SdCard.h in Sources */,
+				F4AD421C19F87D1D005B699A /* AmurIO.cpp in Sources */,
 				AA2A141021211605AA0000D8 /* SdInfo.h in Sources */,
 				AA2A141021211605AA0000D9 /* Sensors.cpp in Sources */,
 				AA2A141021211605AA0000DA /* SPI.cpp in Sources */,

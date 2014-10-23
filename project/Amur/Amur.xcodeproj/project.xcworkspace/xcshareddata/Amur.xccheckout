@@ -10,6 +10,8 @@
 	<string>Amur</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>384A4C41-8983-4134-BC2A-7CF62AA16627</key>
+		<string>https://github.com/CopperMaze/tBeat.git</string>
 		<key>4DDDDCE7-A37C-441F-871B-6A5FFA73405F</key>
 		<string>https://github.com/hironroy/amur.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>project/Amur/Amur.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>384A4C41-8983-4134-BC2A-7CF62AA16627</key>
+		<string>../../../../libs/tBeat</string>
 		<key>4DDDDCE7-A37C-441F-871B-6A5FFA73405F</key>
 		<string>../../../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>4DDDDCE7-A37C-441F-871B-6A5FFA73405F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>amur</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>384A4C41-8983-4134-BC2A-7CF62AA16627</string>
+			<key>IDESourceControlWCCName</key>
+			<string>tBeat</string>
 		</dict>
 	</array>
 </dict>

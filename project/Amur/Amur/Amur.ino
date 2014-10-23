@@ -38,113 +38,88 @@
 #endif // end IDE
 
 // Include application, user and local libraries
-#include "LocalLibrary.h"
+#include "tBeat.h"
 #include "Conductor.h"
-ter
+#include "AmurIO.h"
+#include "Metronome.h"
 
 // Prototypes
 
-
-// Define variables and constants
-//
-// Brief	Name of the LED
-// Details	Each board has a LED but connected to a different pin
-//
-//uint8_t myLED;
-//
-//
-////
-//// Brief	Setup
-//// Details	Define the pin the LED is connected to
-////
-//// Add setup code 
-//void setup() {
-//  // myLED pin number
-//#if defined(ENERGIA) // All LaunchPads supported by Energia
-//    myLED = RED_LED;
-//#elif defined(DIGISPARK) // Digispark specific
-//    myLED = 1; // assuming model A
-//#elif defined(MAPLE_IDE) // Maple specific
-//    myLED = BOARD_LED_PIN;
-//#elif defined(WIRING) // Wiring specific
-//    myLED = 15;
-//#else // Arduino, chipKIT, Teensy specific
-//    myLED = 13;
-//#endif
-//
-//    pinMode(myLED, OUTPUT);     
-//}
-//
-////
-//// Brief	Loop
-//// Details	Call blink
-////
-//// Add loop code 
-//void loop() {
-//    blink(myLED, 3, 333);
-//    delay(1000);
-//}
-
 //Inputs
-byte m_clear = 5;    //Master Clear button
-byte m_rec = 6;      //Master Record
-byte m_backout1 = 8; //Backout for Channel 1
-byte m_morse1 = 10;  //Input for Channel 1
-byte m_backout2 = 11;//Backout for Channel 2
-byte m_morse2  = 13; //Input for Channel 2
-
-byte m_metronome = A0;  //Analog input for Metronome Speed
-
-//Outputs
-byte m_metronome_led = 7;  //Metronome Blinking
-byte m_morse_led1 = 9;     // morse 1
-byte m_morse_led2 = 12 ;   // morse 2
-
-//Variables
+//byte m_clear = 5;    //Master Clear button
+//byte m_rec = 6;      //Master Record
+//byte m_backout1 = 8; //Backout for Channel 1
+//byte m_morse1 = 10;  //Input for Channel 1
+//byte m_backout2 = 11;//Backout for Channel 2
+//byte m_morse2  = 13; //Input for Channel 2
+//
+//byte m_metronome = A0;  //Analog input for Metronome Speed
+//
+////Outputs
+//byte m_metronome_led = 7;  //Metronome Blinking
+//byte m_morse_led1 = 9;     // morse 1
+//byte m_morse_led2 = 12 ;   // morse 2
 
 int sensorValue = 0;
 
 void setup() {
+    Serial.begin(9600);      // open the serial port at 9600 bps:
+
     //Setting up Pins
-    pinMode(m_clear,INPUT);
-    pinMode(m_rec,INPUT);
-    pinMode(m_backout1,INPUT);
-    pinMode(m_morse1,INPUT);
-    pinMode(m_backout2,INPUT);
-    pinMode(m_morse2,INPUT);
-    
-    pinMode(m_metronome_led, OUTPUT);
-    pinMode(m_morse_led1, OUTPUT);
-    pinMode(m_morse_led2, OUTPUT);
+//    pinMode(m_clear,INPUT);
+//    pinMode(m_rec,INPUT);
+//    pinMode(m_backout1,INPUT);
+//    pinMode(m_morse1,INPUT);
+//    pinMode(m_backout2,INPUT);
+//    pinMode(m_morse2,INPUT);
+//    
+//    pinMode(m_metronome_led, OUTPUT);
+//    pinMode(m_morse_led1, OUTPUT);
+//    pinMode(m_morse_led2, OUTPUT);
     
 }
 void loop() {
     
-    //Testing Potentiometer and Metronome Led
-    sensorValue = analogRead(m_metronome);
-    // turn the ledPin on
-    digitalWrite(m_metronome_led, HIGH);
-    // stop the program for <sensorValue> milliseconds:
-    delay(sensorValue);
-    // turn the ledPin off:
-    digitalWrite(m_metronome_led, LOW);
-    // stop the program for for <sensorValue> milliseconds:
-    delay(sensorValue);
+    int currBPM = metronome.getCurrentBPM();
+    int currDelay = metronome.getCurrentDelay();
+
+    
+    Serial.println("BPM");
+    Serial.println(currBPM);
+    Serial.println("Delay");
+    Serial.println(currDelay);
+
+    amurIO.metronomeLEDOn();
+    delay(currDelay);
+    amurIO.metronomeLEDOff();
+    delay(currDelay);
+
+    
+//    //Testing Potentiometer and Metronome Led
+//    sensorValue = analogRead(m_metronome);
+//    // turn the ledPin on
+//    digitalWrite(m_metronome_led, HIGH);
+//    // stop the program for <sensorValue> milliseconds:
+//    delay(sensorValue);
+//    // turn the ledPin off:
+//    digitalWrite(m_metronome_led, LOW);
+//    // stop the program for for <sensorValue> milliseconds:
+//    delay(sensorValue);
     
     //Testing morse button and LED (remember delays from previous potentiometer
-    if(digitalRead(m_morse1) == LOW){
-        digitalWrite(m_morse_led1, HIGH);
-    }
-    else{
-        digitalWrite(m_morse_led1, LOW);
-    }
-    
-    if(digitalRead(m_morse2) == LOW){
-        digitalWrite(m_morse_led2, HIGH);
-    }
-    else{
-        digitalWrite(m_morse_led2, LOW);
-    }
+//    if(digitalRead(m_morse1) == LOW){
+//        digitalWrite(m_morse_led1, HIGH);
+//    }
+//    else{
+//        digitalWrite(m_morse_led1, LOW);
+//    }
+//    
+//    if(digitalRead(m_morse2) == LOW){
+//        digitalWrite(m_morse_led2, HIGH);
+//    }
+//    else{
+//        digitalWrite(m_morse_led2, LOW);
+//    }
     
     
 }
