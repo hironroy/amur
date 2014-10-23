@@ -81,7 +81,7 @@ void setup() {
 void loop() {
     
     int currBPM = metronome.getCurrentBPM();
-    int currDelay = metronome.getCurrentDelay();
+    int currDelay = metronome.getCurrentDelay() / 2;
 
     
     Serial.println("BPM");
