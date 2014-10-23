@@ -37,6 +37,19 @@ void AmurIO::blinkMetronomeLED(){
     amurBlinkMetronome();
 }
 
+
+int AmurIO::readPin(byte pincode){
+    return digitalRead(pincode);
+}
+
+void AmurIO::pushTrigger(byte pincode){
+    digitalWrite(pincode, HIGH);
+}
+void AmurIO::lowTrigger(byte pincode){
+    digitalWrite(pincode, LOW);
+}
+
+
 void amurStopBlinkMetronome(){
     amurIO.metronomeLEDOff();
     tBeat.killHook(20, amurStopBlinkMetronome);

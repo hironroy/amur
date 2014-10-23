@@ -20,6 +20,10 @@ public:
     void metronomeLEDOff();
     void blinkMetronomeLED();
     int sampleInterval;
+    void pushTrigger(byte pincode);
+    void lowTrigger(byte pincode);
+    int readPin(byte pincode);
+
 private:
     //Inputs
     byte m_metronome;  //Analog input for Metronome Speed

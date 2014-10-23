@@ -242,6 +242,7 @@
 		AA2A141021211605AA0000FC /* SdFat.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141021211605AA0000FC /* SdFat.h */; };
 		AA2A141021211605AA0000FD /* SdFatmainpage.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA141021211605AA0000FD /* SdFatmainpage.h */; };
 		F425FFF319F73C200014C238 /* Amur.ino in Sources */ = {isa = PBXBuildFile; fileRef = F435FFF319F73C200014C238 /* Amur.ino */; };
+		F4337E1619F9BB19006509FD /* Hitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4337E1419F9BB19006509FD /* Hitter.cpp */; };
 		F435000A19F74B590014C238 /* Conductor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F435000819F74B590014C238 /* Conductor.cpp */; };
 		F435FF9F19F73C1F0014C238 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F435FF9E19F73C1F0014C238 /* main.cpp */; };
 		F456760119F89609005C3FE8 /* Metronome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F45675FF19F89609005C3FE8 /* Metronome.cpp */; };
@@ -484,6 +485,8 @@
 		AAAA141021211605AA0000FB /* Sd2PinMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sd2PinMap.h; sourceTree = "<group>"; };
 		AAAA141021211605AA0000FC /* SdFat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SdFat.h; sourceTree = "<group>"; };
 		AAAA141021211605AA0000FD /* SdFatmainpage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SdFatmainpage.h; sourceTree = "<group>"; };
+		F4337E1419F9BB19006509FD /* Hitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hitter.cpp; sourceTree = "<group>"; };
+		F4337E1519F9BB19006509FD /* Hitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hitter.h; sourceTree = "<group>"; };
 		F435000619F73E750014C238 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		F435000819F74B590014C238 /* Conductor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Conductor.cpp; sourceTree = "<group>"; };
 		F435000919F74B590014C238 /* Conductor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conductor.h; sourceTree = "<group>"; };
@@ -971,6 +974,15 @@
 			path = utility;
 			sourceTree = "<group>";
 		};
+		F4337E1319F9BB00006509FD /* Instrument */ = {
+			isa = PBXGroup;
+			children = (
+				F4337E1419F9BB19006509FD /* Hitter.cpp */,
+				F4337E1519F9BB19006509FD /* Hitter.h */,
+			);
+			name = Instrument;
+			sourceTree = "<group>";
+		};
 		F435000519F73E750014C238 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -1011,6 +1023,7 @@
 		F435FF9D19F73C1F0014C238 /* Amur */ = {
 			isa = PBXGroup;
 			children = (
+				F4337E1319F9BB00006509FD /* Instrument */,
 				F4AD421919F87CFF005B699A /* Drivers */,
 				F435000719F74B0C0014C238 /* Timing */,
 				F435FF9E19F73C1F0014C238 /* main.cpp */,
@@ -1351,6 +1364,7 @@
 				AA2A141021211605AA000044 /* USBAPI.h in Sources */,
 				AA2A141021211605AA000045 /* USBCore.cpp in Sources */,
 				AA2A141021211605AA000046 /* USBCore.h in Sources */,
+				F4337E1619F9BB19006509FD /* Hitter.cpp in Sources */,
 				AA2A141021211605AA000047 /* USBDesc.h in Sources */,
 				AA2A141021211605AA000048 /* WCharacter.h in Sources */,
 				AA2A141021211605AA000049 /* WInterrupts.c in Sources */,

@@ -42,6 +42,7 @@
 #include "Conductor.h"
 #include "AmurIO.h"
 #include "Metronome.h"
+#include "Hitter.h"
 
 // Prototypes
 
@@ -60,15 +61,22 @@
 //byte m_morse_led1 = 9;     // morse 1
 //byte m_morse_led2 = 12 ;   // morse 2
 
+//create hitter w/ 20ms hit duration, listens for hits on port 10, that outputs to output 9
+Hitter hitter1;
 
 void runInterval();
+void runHitter1();
+
 
 void setup() {
     Serial.begin(9600);      // open the serial port at 9600 bps:
+    hitter1.begin(100, 10, 9);
 
     tBeat.init();
     
     tBeat.newHook(amurIO.sampleInterval, runInterval);
+    tBeat.newHook(amurIO.sampleInterval, runHitter1);
+
     
     tBeat.start();
 
@@ -89,6 +97,9 @@ void setup() {
 
 void runInterval(){
     amurMetronomeHandleInterval();
+}
+void runHitter1(){
+    hitter1.handleInterval();
 }
 
 void loop() {
