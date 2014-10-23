@@ -18,6 +18,7 @@ public:
     int getTempoPotVal();
     void metronomeLEDOn();
     void metronomeLEDOff();
+    void blinkMetronomeLED();
     int sampleInterval;
 private:
     //Inputs

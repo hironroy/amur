@@ -7,8 +7,11 @@
 //
 
 #include "AmurIO.h"
+#include "tBeat.h"
 
 AmurIO amurIO;
+void amurBlinkMetronome();
+void amurStopBlinkMetronome();
 
 AmurIO::AmurIO(){
     m_metronome = A0;
@@ -30,4 +33,16 @@ void AmurIO::metronomeLEDOn(){
 void AmurIO::metronomeLEDOff(){
     digitalWrite(m_metronome_led, LOW);
 }
+void AmurIO::blinkMetronomeLED(){
+    amurBlinkMetronome();
+}
 
+void amurStopBlinkMetronome(){
+    amurIO.metronomeLEDOff();
+    tBeat.killHook(20, amurStopBlinkMetronome);
+}
+
+void amurBlinkMetronome(){
+    amurIO.metronomeLEDOn();
+    tBeat.newHook(20, amurStopBlinkMetronome);
+}
