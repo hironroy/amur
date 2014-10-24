@@ -31,8 +31,6 @@ void Hitter::handleInterval(){
     }
     
     if(newHit){
-        Serial.println("New Hit Handling");
-
         //trigger the hit against AmurIO to output pin
         amurIO.pushTrigger(outputPin);
         
@@ -51,7 +49,6 @@ void Hitter::handleInterval(){
             isDoingHit = false;
             msSinceLastHit = 0;
             amurIO.lowTrigger(outputPin);
-            Serial.println("Hit Over");
         }
     }
     else{

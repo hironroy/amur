@@ -10,6 +10,7 @@
 #define __Amur__Hitter__
 
 #include <iostream>
+#include "StandardCplusplus.h"
 #include "AmurIO.h"
 
 class Hitter {

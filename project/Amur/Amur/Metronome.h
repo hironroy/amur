@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "AmurIO.h"
+#include "StandardCplusplus.h"
 
 class Metronome {
 public:

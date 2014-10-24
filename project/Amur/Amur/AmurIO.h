@@ -10,6 +10,7 @@
 #define __Amur__AmurIO__
 
 #include <iostream>
+#include "StandardCplusplus.h"
 #include "Arduino.h"
 
 class AmurIO {

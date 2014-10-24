@@ -38,8 +38,8 @@
 #endif // end IDE
 
 // Include application, user and local libraries
+#include "StandardCplusplus.h"
 #include "tBeat.h"
-#include "Conductor.h"
 #include "AmurIO.h"
 #include "Metronome.h"
 #include "Hitter.h"
