@@ -291,6 +291,7 @@
 		F4337EBF19F9D26F006509FD /* utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4337E8C19F9D26F006509FD /* utility.cpp */; };
 		F4337EC019F9D26F006509FD /* valarray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4337E8F19F9D26F006509FD /* valarray.cpp */; };
 		F4337EC119F9D26F006509FD /* vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4337E9119F9D26F006509FD /* vector.cpp */; };
+		F4337EC419F9E0B1006509FD /* Timeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4337EC219F9E0B1006509FD /* Timeline.cpp */; };
 		F435FF9F19F73C1F0014C238 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F435FF9E19F73C1F0014C238 /* main.cpp */; };
 		F456760119F89609005C3FE8 /* Metronome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F45675FF19F89609005C3FE8 /* Metronome.cpp */; };
 		F4AD421819F87BF1005B699A /* tBeat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4AD421619F87BF1005B699A /* tBeat.cpp */; };
@@ -653,6 +654,8 @@
 		F4337E8F19F9D26F006509FD /* valarray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = valarray.cpp; sourceTree = "<group>"; };
 		F4337E9019F9D26F006509FD /* vector */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vector; sourceTree = "<group>"; };
 		F4337E9119F9D26F006509FD /* vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vector.cpp; sourceTree = "<group>"; };
+		F4337EC219F9E0B1006509FD /* Timeline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timeline.cpp; sourceTree = "<group>"; };
+		F4337EC319F9E0B1006509FD /* Timeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timeline.h; sourceTree = "<group>"; };
 		F435000619F73E750014C238 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		F435FF9B19F73C1F0014C238 /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
 		F435FF9E19F73C1F0014C238 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -1313,6 +1316,8 @@
 			children = (
 				F45675FF19F89609005C3FE8 /* Metronome.cpp */,
 				F456760019F89609005C3FE8 /* Metronome.h */,
+				F4337EC219F9E0B1006509FD /* Timeline.cpp */,
+				F4337EC319F9E0B1006509FD /* Timeline.h */,
 			);
 			name = Timing;
 			sourceTree = "<group>";
@@ -1848,6 +1853,7 @@
 				AA2A141021211605AA0000D3 /* Multiplexer.cpp in Sources */,
 				F4337EBD19F9D26F006509FD /* support.cpp in Sources */,
 				AA2A141021211605AA0000D4 /* Multiplexer.h in Sources */,
+				F4337EC419F9E0B1006509FD /* Timeline.cpp in Sources */,
 				F4337EAF19F9D26F006509FD /* new_handler.cpp in Sources */,
 				AA2A141021211605AA0000D5 /* RobotSdCard.cpp in Sources */,
 				AA2A141021211605AA0000D6 /* SdCard.cpp in Sources */,

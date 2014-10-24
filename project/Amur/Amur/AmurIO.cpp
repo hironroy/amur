@@ -20,6 +20,7 @@ AmurIO::AmurIO(){
 
     //say that the sample interval is 8ms
     sampleInterval = 8;
+    debounceDuration = 200;
 }
 
 int AmurIO::getTempoPotVal(){

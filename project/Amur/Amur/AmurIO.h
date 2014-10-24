@@ -21,6 +21,7 @@ public:
     void metronomeLEDOff();
     void blinkMetronomeLED();
     int sampleInterval;
+    int debounceDuration;
     void pushTrigger(byte pincode);
     void lowTrigger(byte pincode);
     int readPin(byte pincode);

@@ -1,17 +1,4 @@
-Builds/main.o: main.cpp \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Arduino.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/binary.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WCharacter.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WString.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/HardwareSerial.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Stream.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Print.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Printable.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/new.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/standard/pins_arduino.h \
-  Amur.ino \
-  /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/StandardCplusplus.h \
-  /Users/hironroy/Documents/Arduino/libraries/tBeat/tBeat.h AmurIO.h \
+Builds/Timeline.o: Timeline.cpp Timeline.h \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/iostream \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/basic_definitions \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/system_configuration.h \
@@ -43,5 +30,17 @@ Builds/main.o: main.cpp \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/ostream_helpers \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/serstream \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/HardwareSerial.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Stream.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Print.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WString.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Printable.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/new.h \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/string_iostream \
-  Metronome.h Timeline.h Hitter.h
+  /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/StandardCplusplus.h \
+  AmurIO.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Arduino.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/binary.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WCharacter.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/HardwareSerial.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/standard/pins_arduino.h \
+  Metronome.h

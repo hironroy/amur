@@ -42,6 +42,7 @@
 #include "tBeat.h"
 #include "AmurIO.h"
 #include "Metronome.h"
+#include "Timeline.h"
 #include "Hitter.h"
 
 // Prototypes
@@ -85,6 +86,7 @@ void setup() {
 
 void runInterval(){
     amurMetronomeHandleInterval();
+    timeline.handleInterval();
 }
 void runHitter1(){
     hitter1.handleInterval();
