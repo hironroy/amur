@@ -63,14 +63,6 @@ void Timeline::updateLoop(){
         float loopDuration = ((float)metronome.getCurrentDelay() * loopBeatCount);
         float sampleDurationRatio = (float) amurIO.sampleInterval / loopDuration;
         loopPercentPlayed += sampleDurationRatio;
-        
-        if(metronome.isBeatInterval){
-            Serial.println("Ratio of loop played");
-            Serial.println(loopPercentPlayed);
-            if(loopPercentPlayed > 1){
-                Serial.println("Uh OH invalid ratio");
-            }
-        }
     }
 
 }
@@ -78,6 +70,8 @@ void Timeline::updateLoop(){
 void Timeline::resetLoop(){
     //reset the loop
     currentBeat = 0;
+    Serial.println("Percent Complete on Reset");
+    Serial.println(loopPercentPlayed);
     loopPercentPlayed = 0;
 }
 
