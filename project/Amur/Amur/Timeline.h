@@ -30,6 +30,8 @@ private:
     int timeSinceStartPress;
     int clearPin;
     int timeSinceClearPress;
+    bool isSettingLoop;
+    bool hasLoop;
     
 };
 

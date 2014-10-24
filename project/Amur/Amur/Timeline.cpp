@@ -20,18 +20,30 @@ Timeline::Timeline(int _startLockPin, int _clearPin){
     
     timeSinceClearPress = 0;
     timeSinceStartPress = 0;
+    
+    hasLoop = false;
 }
 
 void Timeline::start(){
-    
+    if(!isSettingLoop && !hasLoop){
+        isSettingLoop = true;
+        Serial.println("Timeline Start Loop");
+    }
+    else if(isSettingLoop){
+        lock();
+    }
 }
 
 void Timeline::lock(){
-    
+    isSettingLoop = false;
+    hasLoop = true;
+    Serial.println("Timeline Loop Lock");
+
 }
 
 void Timeline::clear(){
-    
+    hasLoop = false;
+    Serial.println("Timeline Clear");
 }
 
 float Timeline::ratioComplete(){
@@ -77,10 +89,10 @@ bool Timeline::clearTriggered(){
 
 void Timeline::handleInterval(){
     if(startTriggered()){
-        Serial.println("Timeline Start Triggered");
+        start();
     }
     
     if(clearTriggered()){
-        Serial.println("Timeline Clear Triggered");
+        clear();
     }
 }
