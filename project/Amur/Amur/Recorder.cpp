@@ -36,12 +36,18 @@ void Recorder::recordHit(){
 bool Recorder::intervalHasHit(){
     if(timeline.isLoopPlaying()){
         double ratio = timeline.ratioComplete();
+        
+        if(currentHitIndex < 0 && timeline.loopReset){
+            currentHitIndex = 0;
+        }
+        else if(currentHitIndex< 0){
+            return false;
+        }
+        
         if(ratio >= hits[currentHitIndex]){
             
             if(currentHitIndex >= hits.size() - 1){
-                if(timeline.loopReset){
-                    currentHitIndex = 0;
-                }
+                currentHitIndex = -1;
             }
             else{
                 currentHitIndex = currentHitIndex + 1;
