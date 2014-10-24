@@ -23,7 +23,7 @@ Timeline::Timeline(int _startLockPin, int _clearPin){
     
     hasLoop = false;
     loopBeatCount = 0;
-    currentBeat = 0;
+    currentBeat = -1;
     loopPercentPlayed = 0;
 }
 
@@ -50,7 +50,7 @@ void Timeline::updateLoop(){
         loopIsPlaying = true;
         
         //update the current beat
-        if(currentBeat == loopBeatCount){
+        if(currentBeat == loopBeatCount || currentBeat < 0){
             resetLoop();
         }
         currentBeat += 1;

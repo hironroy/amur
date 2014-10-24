@@ -9,7 +9,7 @@
 #include "Recorder.h"
 
 Recorder::Recorder(){
-    
+    hits.reserve(400);
 }
 
 bool Recorder::isRecording(){
@@ -17,5 +17,12 @@ bool Recorder::isRecording(){
 }
 
 void Recorder::recordHit(){
-    Serial.println("Record Hit");
+    hits.push_back(timeline.ratioComplete());
+    
+    //print out the vectors
+    for (unsigned i=0; i<hits.size(); ++i)
+    {
+        Serial.println(hits[i]);
+    }
+    
 }

@@ -19,6 +19,8 @@ public:
     Recorder();
     bool isRecording();
     void recordHit();
+private:
+    std::vector<float> hits;
 };
 
 #endif /* defined(__Amur__Recorder__) */
