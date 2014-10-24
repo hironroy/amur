@@ -28,6 +28,7 @@ private:
     byte inputPin;
     int msSinceLastHit;
     Recorder recorder;
+    void routeHitToRecorder();
     
 };
 

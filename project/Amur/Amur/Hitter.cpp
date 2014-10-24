@@ -59,9 +59,15 @@ void Hitter::handleInterval(){
 
 void Hitter::doHit(){
     if(!isDoingHit){
-        Serial.println(recorder.isRecording());
+        if(recorder.isRecording()){
+            routeHitToRecorder();
+        }
         newHit = true;
         isDoingHit = true;
     }
+}
+
+void Hitter::routeHitToRecorder(){
+    recorder.recordHit();
 }
 

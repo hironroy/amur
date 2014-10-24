@@ -15,3 +15,7 @@ Recorder::Recorder(){
 bool Recorder::isRecording(){
     return timeline.isLoopPlaying();
 }
+
+void Recorder::recordHit(){
+    Serial.println("Record Hit");
+}

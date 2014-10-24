@@ -18,6 +18,7 @@ class Recorder {
 public:
     Recorder();
     bool isRecording();
+    void recordHit();
 };
 
 #endif /* defined(__Amur__Recorder__) */
