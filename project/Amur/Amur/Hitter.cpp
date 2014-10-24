@@ -10,6 +10,7 @@
 
 Hitter::Hitter() {
     //leave blank
+    recorder = Recorder();
 }
 
 void Hitter::begin(int _hitDuration, byte _inputPin,  byte _outputPin){
@@ -58,6 +59,7 @@ void Hitter::handleInterval(){
 
 void Hitter::doHit(){
     if(!isDoingHit){
+        Serial.println(recorder.isRecording());
         newHit = true;
         isDoingHit = true;
     }

@@ -12,6 +12,7 @@
 #include <iostream>
 #include "StandardCplusplus.h"
 #include "AmurIO.h"
+#include "Recorder.h"
 
 class Hitter {
 public:
@@ -26,6 +27,8 @@ private:
     byte outputPin;
     byte inputPin;
     int msSinceLastHit;
+    Recorder recorder;
+    
 };
 
 #endif /* defined(__Amur__Hitter__) */

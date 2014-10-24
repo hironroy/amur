@@ -24,6 +24,7 @@ public:
     float ratioComplete();
     bool startTriggered();
     bool clearTriggered();
+    bool isLoopPlaying();
 private:
     void startLoopPlay();
     void updateLoop();

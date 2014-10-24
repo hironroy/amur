@@ -1,4 +1,4 @@
-Builds/Hitter.o: Hitter.cpp Hitter.h \
+Builds/Recorder.o: Recorder.cpp Recorder.h \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/iostream \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/basic_definitions \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/system_configuration.h \
@@ -43,4 +43,4 @@ Builds/Hitter.o: Hitter.cpp Hitter.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WCharacter.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/HardwareSerial.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/standard/pins_arduino.h \
-  Recorder.h Timeline.h Metronome.h
+  Timeline.h Metronome.h

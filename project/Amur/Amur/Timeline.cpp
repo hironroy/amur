@@ -60,8 +60,8 @@ void Timeline::updateLoop(){
     
     if(hasLoop){
         //Now we calculate the % complete
-        float loopDuration = ((float)metronome.getCurrentDelay() * loopBeatCount);
-        float sampleDurationRatio = (float) amurIO.sampleInterval / loopDuration;
+        float loopDuration = ((float)metronome.getCurrentDelay() * (float)loopBeatCount);
+        float sampleDurationRatio = (float) amurIO.sampleInterval / (float)loopDuration;
         loopPercentPlayed += sampleDurationRatio;
     }
 
@@ -99,7 +99,11 @@ void Timeline::clear(){
 }
 
 float Timeline::ratioComplete(){
-    
+    return loopPercentPlayed;
+}
+
+bool Timeline::isLoopPlaying(){
+    return loopIsPlaying;
 }
 
 /**

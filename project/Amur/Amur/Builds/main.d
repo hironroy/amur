@@ -44,4 +44,4 @@ Builds/main.o: main.cpp \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/serstream \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/HardwareSerial.h \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/string_iostream \
-  Metronome.h Timeline.h Hitter.h
+  Metronome.h Timeline.h Hitter.h Recorder.h

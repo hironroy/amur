@@ -292,6 +292,7 @@
 		F4337EC019F9D26F006509FD /* valarray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4337E8F19F9D26F006509FD /* valarray.cpp */; };
 		F4337EC119F9D26F006509FD /* vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4337E9119F9D26F006509FD /* vector.cpp */; };
 		F4337EC419F9E0B1006509FD /* Timeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4337EC219F9E0B1006509FD /* Timeline.cpp */; };
+		F4337EC819F9FFE8006509FD /* Recorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4337EC619F9FFE8006509FD /* Recorder.cpp */; };
 		F435FF9F19F73C1F0014C238 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F435FF9E19F73C1F0014C238 /* main.cpp */; };
 		F456760119F89609005C3FE8 /* Metronome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F45675FF19F89609005C3FE8 /* Metronome.cpp */; };
 		F4AD421819F87BF1005B699A /* tBeat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4AD421619F87BF1005B699A /* tBeat.cpp */; };
@@ -656,6 +657,8 @@
 		F4337E9119F9D26F006509FD /* vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vector.cpp; sourceTree = "<group>"; };
 		F4337EC219F9E0B1006509FD /* Timeline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timeline.cpp; sourceTree = "<group>"; };
 		F4337EC319F9E0B1006509FD /* Timeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timeline.h; sourceTree = "<group>"; };
+		F4337EC619F9FFE8006509FD /* Recorder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Recorder.cpp; sourceTree = "<group>"; };
+		F4337EC719F9FFE8006509FD /* Recorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recorder.h; sourceTree = "<group>"; };
 		F435000619F73E750014C238 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		F435FF9B19F73C1F0014C238 /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
 		F435FF9E19F73C1F0014C238 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -1300,6 +1303,15 @@
 			path = string_vector;
 			sourceTree = "<group>";
 		};
+		F4337EC519F9FFD3006509FD /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				F4337EC619F9FFE8006509FD /* Recorder.cpp */,
+				F4337EC719F9FFE8006509FD /* Recorder.h */,
+			);
+			name = Recording;
+			sourceTree = "<group>";
+		};
 		F435000519F73E750014C238 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -1341,6 +1353,7 @@
 		F435FF9D19F73C1F0014C238 /* Amur */ = {
 			isa = PBXGroup;
 			children = (
+				F4337EC519F9FFD3006509FD /* Recording */,
 				F4337E1319F9BB00006509FD /* Instrument */,
 				F4AD421919F87CFF005B699A /* Drivers */,
 				F435000719F74B0C0014C238 /* Timing */,
@@ -1778,6 +1791,7 @@
 				F4337EB219F9D26F006509FD /* new_opv.cpp in Sources */,
 				AA2A141021211605AA000092 /* GSM3ShieldV1BandManagement.h in Sources */,
 				AA2A141021211605AA000093 /* GSM3ShieldV1BaseProvider.cpp in Sources */,
+				F4337EC819F9FFE8006509FD /* Recorder.cpp in Sources */,
 				F4AD421819F87BF1005B699A /* tBeat.cpp in Sources */,
 				AA2A141021211605AA000094 /* GSM3ShieldV1BaseProvider.h in Sources */,
 				AA2A141021211605AA000095 /* GSM3ShieldV1CellManagement.cpp in Sources */,
