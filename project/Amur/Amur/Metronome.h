@@ -18,6 +18,7 @@ public:
     Metronome(int _minBPM, int _maxBPM);
     int getCurrentDelay();
     float getCurrentBPM();
+    bool isBeatInterval;
 private:
     int minBPM;
     int maxBPM;

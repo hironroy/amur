@@ -32,6 +32,7 @@ private:
     int timeSinceClearPress;
     bool isSettingLoop;
     bool hasLoop;
+    int loopBeatCount;
     
 };
 

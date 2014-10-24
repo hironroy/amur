@@ -22,6 +22,25 @@ Timeline::Timeline(int _startLockPin, int _clearPin){
     timeSinceStartPress = 0;
     
     hasLoop = false;
+    loopBeatCount = 0;
+}
+
+void Timeline::handleInterval(){
+    //IO Related Logic
+    if(startTriggered()){
+        start();
+    }
+    
+    if(clearTriggered()){
+        clear();
+    }
+    
+    //count the beats if setting loop
+    if(isSettingLoop && metronome.isBeatInterval){
+        loopBeatCount++;
+        Serial.println("Loop Beat Count");
+        Serial.println(loopBeatCount);
+    }
 }
 
 void Timeline::start(){
@@ -43,6 +62,7 @@ void Timeline::lock(){
 
 void Timeline::clear(){
     hasLoop = false;
+    loopBeatCount = 0;
     Serial.println("Timeline Clear");
 }
 
@@ -84,15 +104,5 @@ bool Timeline::clearTriggered(){
     }
     else{
         return false;
-    }
-}
-
-void Timeline::handleInterval(){
-    if(startTriggered()){
-        start();
-    }
-    
-    if(clearTriggered()){
-        clear();
     }
 }

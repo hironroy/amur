@@ -17,6 +17,7 @@ Metronome::Metronome(int _minBPM, int _maxBPM) {
     minBPM = _minBPM;
     BPMRange = maxBPM - minBPM;
     maxTempoPotVal = 1020;
+    isBeatInterval = false;
 }
 
 int Metronome::getCurrentDelay(){
@@ -45,9 +46,13 @@ int lastReadTempoDelay = metronome.getCurrentDelay();
 void amurMetronomeHandleInterval(){
     msSinceLastBlink += amurIO.sampleInterval;
     
+    metronome.isBeatInterval = false;
+    
     int currentDelay = metronome.getCurrentDelay();
     if(msSinceLastBlink > currentDelay){
+        //Beat Detected
         amurIO.blinkMetronomeLED();
+        metronome.isBeatInterval = true;
         msSinceLastBlink = 0;
     }
     lastReadTempoDelay = currentDelay;
