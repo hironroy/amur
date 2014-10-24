@@ -23,6 +23,7 @@ Timeline::Timeline(int _startLockPin, int _clearPin){
     
     hasLoop = false;
     loopBeatCount = 0;
+    currentBeat = 0;
 }
 
 void Timeline::handleInterval(){
@@ -38,8 +39,15 @@ void Timeline::handleInterval(){
     //count the beats if setting loop
     if(isSettingLoop && metronome.isBeatInterval){
         loopBeatCount++;
-        Serial.println("Loop Beat Count");
-        Serial.println(loopBeatCount);
+    }
+    else if (metronome.isBeatInterval && hasLoop) {
+        loopIsPlaying = true;
+        if(currentBeat == loopBeatCount){
+            currentBeat = 0;
+        }
+        currentBeat += 1;
+
+        Serial.println(currentBeat);
     }
 }
 
@@ -70,6 +78,9 @@ float Timeline::ratioComplete(){
     
 }
 
+/**
+ Handle Debouncing inputs
+ */
 bool Timeline::startTriggered(){
     
     if(timeSinceStartPress == 0 && amurIO.readPin(startLockPin) == LOW){

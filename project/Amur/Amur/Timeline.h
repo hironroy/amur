@@ -25,6 +25,8 @@ public:
     bool startTriggered();
     bool clearTriggered();
 private:
+    void startLoopPlay();
+    bool loopIsPlaying;
     float lastRatioComplete;
     int startLockPin;
     int timeSinceStartPress;
@@ -33,6 +35,7 @@ private:
     bool isSettingLoop;
     bool hasLoop;
     int loopBeatCount;
+    int currentBeat;
     
 };
 
