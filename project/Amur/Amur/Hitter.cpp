@@ -33,7 +33,7 @@ void Hitter::handleInterval(){
         doHit();
     }
     
-    if(newHit || recorder.intervalHasHit()){
+    if(newHit || (recorder.intervalHasHit() && !isDoingHit)){
         actuateHit();
     }
     else if(isDoingHit){
