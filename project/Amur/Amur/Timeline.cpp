@@ -55,7 +55,6 @@ void Timeline::updateLoop(){
         }
         currentBeat += 1;
         
-        Serial.println(currentBeat);
     }
     
     if(hasLoop){
@@ -70,15 +69,12 @@ void Timeline::updateLoop(){
 void Timeline::resetLoop(){
     //reset the loop
     currentBeat = 0;
-    Serial.println("Percent Complete on Reset");
-    Serial.println(loopPercentPlayed);
     loopPercentPlayed = 0;
 }
 
 void Timeline::start(){
     if(!isSettingLoop && !hasLoop){
         isSettingLoop = true;
-        Serial.println("Timeline Start Loop");
     }
     else if(isSettingLoop){
         lock();
@@ -88,14 +84,12 @@ void Timeline::start(){
 void Timeline::lock(){
     isSettingLoop = false;
     hasLoop = true;
-    Serial.println("Timeline Loop Lock");
 
 }
 
 void Timeline::clear(){
     hasLoop = false;
     loopBeatCount = 0;
-    Serial.println("Timeline Clear");
 }
 
 float Timeline::ratioComplete(){
