@@ -29,7 +29,8 @@ private:
     int msSinceLastHit;
     Recorder recorder;
     void routeHitToRecorder();
-    
+    void actuateHit();
+
 };
 
 #endif /* defined(__Amur__Hitter__) */

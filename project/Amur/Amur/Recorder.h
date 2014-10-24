@@ -17,10 +17,14 @@
 class Recorder {
 public:
     Recorder();
+    void begin();
     bool isRecording();
     void recordHit();
+    bool intervalHasHit();
 private:
-    std::vector<float> hits;
+    std::vector<double> hits;
+    int currentHitIndex;
+    bool newLoop;
 };
 
 #endif /* defined(__Amur__Recorder__) */

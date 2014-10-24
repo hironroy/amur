@@ -24,7 +24,7 @@ Timeline::Timeline(int _startLockPin, int _clearPin){
     hasLoop = false;
     loopBeatCount = 0;
     currentBeat = -1;
-    loopPercentPlayed = 0;
+    loopPercentPlayed = 0.0;
 }
 
 void Timeline::handleInterval(){
@@ -41,7 +41,10 @@ void Timeline::handleInterval(){
     
 }
 
+
 void Timeline::updateLoop(){
+    loopReset = false;
+    
     //count the beats if setting loop
     if(isSettingLoop && metronome.isBeatInterval){
         loopBeatCount++;
@@ -54,22 +57,31 @@ void Timeline::updateLoop(){
             resetLoop();
         }
         currentBeat += 1;
+
         
     }
     
     if(hasLoop){
-        //Now we calculate the % complete
-        float loopDuration = ((float)metronome.getCurrentDelay() * (float)loopBeatCount);
-        float sampleDurationRatio = (float) amurIO.sampleInterval / (float)loopDuration;
-        loopPercentPlayed += sampleDurationRatio;
+        updateLoopPercentage();
     }
 
 }
 
+void Timeline::updateLoopPercentage(){
+    //Now we calculate the % complete
+    if(loopIsPlaying){
+        int loopDuration = metronome.getCurrentDelay() * loopBeatCount;
+        double sampleDurationRatio = (double) amurIO.sampleInterval / (double)loopDuration;
+        loopPercentPlayed += sampleDurationRatio;
+    }
+}
+
+
 void Timeline::resetLoop(){
     //reset the loop
     currentBeat = 0;
-    loopPercentPlayed = 0;
+    loopPercentPlayed = 0.0;
+    loopReset = true;
 }
 
 void Timeline::start(){

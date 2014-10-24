@@ -25,10 +25,12 @@ public:
     bool startTriggered();
     bool clearTriggered();
     bool isLoopPlaying();
+    bool loopReset;
 private:
     void startLoopPlay();
     void updateLoop();
     void resetLoop();
+    void updateLoopPercentage();
     
     bool loopIsPlaying;
     float lastRatioComplete;
@@ -40,7 +42,7 @@ private:
     bool hasLoop;
     int loopBeatCount;
     int currentBeat;
-    float loopPercentPlayed;
+    double loopPercentPlayed;
     
 };
 

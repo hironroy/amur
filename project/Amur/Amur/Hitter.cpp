@@ -10,7 +10,6 @@
 
 Hitter::Hitter() {
     //leave blank
-    recorder = Recorder();
 }
 
 void Hitter::begin(int _hitDuration, byte _inputPin,  byte _outputPin){
@@ -23,6 +22,9 @@ void Hitter::begin(int _hitDuration, byte _inputPin,  byte _outputPin){
     
     pinMode(outputPin, OUTPUT);
     pinMode(inputPin, INPUT);
+    
+    recorder = Recorder();
+    recorder.begin();
 }
 
 void Hitter::handleInterval(){
@@ -31,14 +33,8 @@ void Hitter::handleInterval(){
         doHit();
     }
     
-    if(newHit){
-        //trigger the hit against AmurIO to output pin
-        amurIO.pushTrigger(outputPin);
-        
-        //set is doing hit
-        newHit = false;
-
-        msSinceLastHit = 0;
+    if(newHit || recorder.intervalHasHit()){
+        actuateHit();
     }
     else if(isDoingHit){
 
@@ -55,6 +51,14 @@ void Hitter::handleInterval(){
     else{
         amurIO.lowTrigger(outputPin);
     }
+}
+
+void Hitter::actuateHit(){
+    //trigger the hit against AmurIO to output pin
+    amurIO.pushTrigger(outputPin);
+    //set is doing hit
+    newHit = false;
+    msSinceLastHit = 0;
 }
 
 void Hitter::doHit(){
