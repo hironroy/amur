@@ -738,6 +738,8 @@
 		F435FFF319F73C200014C238 /* Amur.ino */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; path = Amur.ino; sourceTree = "<group>"; };
 		F45675FF19F89609005C3FE8 /* Metronome.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Metronome.cpp; sourceTree = "<group>"; };
 		F456760019F89609005C3FE8 /* Metronome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metronome.h; sourceTree = "<group>"; };
+		F484048719FC2DC6006A37DB /* AdafruitCapTouch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdafruitCapTouch.cpp; sourceTree = "<group>"; };
+		F484048819FC2DC6006A37DB /* AdafruitCapTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdafruitCapTouch.h; sourceTree = "<group>"; };
 		F4AD421019F87BF1005B699A /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		F4AD421119F87BF1005B699A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F4AD421419F87BF1005B699A /* tBeatBlinker.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tBeatBlinker.ino; sourceTree = "<group>"; };
@@ -1510,6 +1512,8 @@
 		F4AD421919F87CFF005B699A /* Drivers */ = {
 			isa = PBXGroup;
 			children = (
+				F484048719FC2DC6006A37DB /* AdafruitCapTouch.cpp */,
+				F484048819FC2DC6006A37DB /* AdafruitCapTouch.h */,
 				F4AD421A19F87D1D005B699A /* AmurIO.cpp */,
 				F4AD421B19F87D1D005B699A /* AmurIO.h */,
 			);
@@ -1950,7 +1954,7 @@
 		};
 		F435FFF419F73C200014C238 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F435FFAC19F73C1F0014C238 /* Arduino Mega 2560.xcconfig */;
+			baseConfigurationReference = F435FFB619F73C1F0014C238 /* Arduino Uno.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1990,7 +1994,7 @@
 		};
 		F435FFF519F73C200014C238 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F435FFAC19F73C1F0014C238 /* Arduino Mega 2560.xcconfig */;
+			baseConfigurationReference = F435FFB619F73C1F0014C238 /* Arduino Uno.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

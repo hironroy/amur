@@ -8,7 +8,7 @@ Builds/main.o: main.cpp \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Print.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Printable.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/new.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/mega/pins_arduino.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/standard/pins_arduino.h \
   Amur.ino \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/StandardCplusplus.h \
   /Users/hironroy/Documents/Arduino/libraries/tBeat/tBeat.h AmurIO.h \

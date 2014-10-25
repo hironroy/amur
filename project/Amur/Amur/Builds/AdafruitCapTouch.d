@@ -1,4 +1,4 @@
-Builds/Hitter.o: Hitter.cpp Hitter.h \
+Builds/AdafruitCapTouch.o: AdafruitCapTouch.cpp AdafruitCapTouch.h \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/iostream \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/basic_definitions \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/system_configuration.h \
@@ -35,12 +35,4 @@ Builds/Hitter.o: Hitter.cpp Hitter.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WString.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Printable.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/new.h \
-  /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/string_iostream \
-  /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/StandardCplusplus.h \
-  AmurIO.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Arduino.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/binary.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WCharacter.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/HardwareSerial.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/standard/pins_arduino.h \
-  Recorder.h Timeline.h Metronome.h
+  /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/string_iostream
