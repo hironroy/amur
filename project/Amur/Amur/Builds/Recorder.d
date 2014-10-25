@@ -43,4 +43,9 @@ Builds/Recorder.o: Recorder.cpp Recorder.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WCharacter.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/HardwareSerial.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/standard/pins_arduino.h \
-  Timeline.h Metronome.h
+  AdafruitCapTouch.h \
+  /Applications/Arduino.app/Contents/Resources/Java/libraries/Wire/Wire.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Stream.h \
+  /Users/hironroy/Documents/Arduino/libraries/Adafruit_MPR121_Library/Adafruit_MPR121.h \
+  /Users/hironroy/Documents/Arduino/libraries/tBeat/tBeat.h Timeline.h \
+  Metronome.h

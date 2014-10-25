@@ -8,7 +8,7 @@
 
 #include "Timeline.h"
 
-Timeline timeline(6,5);
+Timeline timeline(10,11);
 
 
 Timeline::Timeline(int _startLockPin, int _clearPin){
@@ -117,7 +117,7 @@ bool Timeline::isLoopPlaying(){
  */
 bool Timeline::startTriggered(){
     
-    if(timeSinceStartPress == 0 && amurIO.readPin(startLockPin) == LOW){
+    if(timeSinceStartPress == 0 && amurIO.readCap(startLockPin)){
         timeSinceStartPress += amurIO.sampleInterval;
         return true;
     }
@@ -135,7 +135,7 @@ bool Timeline::startTriggered(){
 }
 
 bool Timeline::clearTriggered(){
-    if(timeSinceClearPress == 0 && amurIO.readPin(clearPin) == LOW){
+    if(timeSinceClearPress == 0 && amurIO.readCap(clearPin)){
         timeSinceClearPress += amurIO.sampleInterval;
         return true;
     }

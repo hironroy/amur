@@ -11,7 +11,7 @@ Builds/main.o: main.cpp \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/standard/pins_arduino.h \
   Amur.ino \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/StandardCplusplus.h \
-  /Users/hironroy/Documents/Arduino/libraries/tBeat/tBeat.h AmurIO.h \
+  AdafruitCapTouch.h \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/iostream \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/basic_definitions \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/system_configuration.h \
@@ -44,4 +44,8 @@ Builds/main.o: main.cpp \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/serstream \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/HardwareSerial.h \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/string_iostream \
+  /Applications/Arduino.app/Contents/Resources/Java/libraries/Wire/Wire.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Stream.h \
+  /Users/hironroy/Documents/Arduino/libraries/Adafruit_MPR121_Library/Adafruit_MPR121.h \
+  /Users/hironroy/Documents/Arduino/libraries/tBeat/tBeat.h AmurIO.h \
   Metronome.h Timeline.h Hitter.h Recorder.h

@@ -7,7 +7,6 @@
 //
 
 #include "AmurIO.h"
-#include "tBeat.h"
 
 AmurIO amurIO;
 void amurBlinkMetronome();
@@ -41,6 +40,10 @@ void AmurIO::blinkMetronomeLED(){
 
 int AmurIO::readPin(byte pincode){
     return digitalRead(pincode);
+}
+
+int AmurIO::readCap(byte pincode){
+    return touchDriver.isPinUp(pincode);
 }
 
 void AmurIO::pushTrigger(byte pincode){

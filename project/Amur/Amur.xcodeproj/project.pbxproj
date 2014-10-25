@@ -740,6 +740,10 @@
 		F456760019F89609005C3FE8 /* Metronome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metronome.h; sourceTree = "<group>"; };
 		F484048719FC2DC6006A37DB /* AdafruitCapTouch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdafruitCapTouch.cpp; sourceTree = "<group>"; };
 		F484048819FC2DC6006A37DB /* AdafruitCapTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdafruitCapTouch.h; sourceTree = "<group>"; };
+		F484048A19FC2EE9006A37DB /* Adafruit_MPR121.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Adafruit_MPR121.cpp; sourceTree = "<group>"; };
+		F484048B19FC2EE9006A37DB /* Adafruit_MPR121.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adafruit_MPR121.h; sourceTree = "<group>"; };
+		F484048E19FC2EE9006A37DB /* MPR121test.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MPR121test.ino; sourceTree = "<group>"; };
+		F484048F19FC2EE9006A37DB /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		F4AD421019F87BF1005B699A /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		F4AD421119F87BF1005B699A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F4AD421419F87BF1005B699A /* tBeatBlinker.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tBeatBlinker.ino; sourceTree = "<group>"; };
@@ -1317,6 +1321,7 @@
 		F435000519F73E750014C238 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F484048919FC2EE9006A37DB /* Adafruit_MPR121_Library */,
 				F4337E1719F9D26F006509FD /* StandardCplusplus */,
 				F4AD420F19F87BF1005B699A /* tBeat */,
 				F435000619F73E750014C238 /* readme.txt */,
@@ -1478,6 +1483,33 @@
 				F435FFF219F73C200014C238 /* clupload_osx.sh */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		F484048919FC2EE9006A37DB /* Adafruit_MPR121_Library */ = {
+			isa = PBXGroup;
+			children = (
+				F484048A19FC2EE9006A37DB /* Adafruit_MPR121.cpp */,
+				F484048B19FC2EE9006A37DB /* Adafruit_MPR121.h */,
+				F484048C19FC2EE9006A37DB /* examples */,
+				F484048F19FC2EE9006A37DB /* README.txt */,
+			);
+			path = Adafruit_MPR121_Library;
+			sourceTree = "<group>";
+		};
+		F484048C19FC2EE9006A37DB /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				F484048D19FC2EE9006A37DB /* MPR121test */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		F484048D19FC2EE9006A37DB /* MPR121test */ = {
+			isa = PBXGroup;
+			children = (
+				F484048E19FC2EE9006A37DB /* MPR121test.ino */,
+			);
+			path = MPR121test;
 			sourceTree = "<group>";
 		};
 		F4AD420F19F87BF1005B699A /* tBeat */ = {

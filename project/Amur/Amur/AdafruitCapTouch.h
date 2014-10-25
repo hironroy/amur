@@ -10,5 +10,18 @@
 #define __Amur__AdafruitCapTouch__
 
 #include <iostream>
+#include <Wire.h>
+#include "Adafruit_MPR121.h"
+#include "StandardCplusplus.h"
+
+
+class AdafruitCapTouch {
+public:
+    Adafruit_MPR121 touchAPI;
+    void begin();
+    int isPinUp(int pincode);
+};
+
+extern AdafruitCapTouch touchDriver;
 
 #endif /* defined(__Amur__AdafruitCapTouch__) */

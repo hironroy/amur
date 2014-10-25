@@ -39,6 +39,8 @@
 
 // Include application, user and local libraries
 #include "StandardCplusplus.h"
+
+#include "AdafruitCapTouch.h"
 #include "tBeat.h"
 #include "AmurIO.h"
 #include "Metronome.h"
@@ -60,12 +62,19 @@ Hitter hitter2;
 void runInterval();
 void runHitter1();
 void runHitter2();
+void printRAM();
 
+int freeRam ()
+{
+    extern int __heap_start, *__brkval;
+    int v;
+    return (int) &v - (__brkval == 0 ? (int) &__heap_start : (int) __brkval);
+}
 
 
 void setup() {
     Serial.begin(9600);      // open the serial port at 9600 bps:
-    
+    touchDriver.begin();
     //hitters init
     
     // duration of hit (ms), input pin, output pin
@@ -78,6 +87,8 @@ void setup() {
     tBeat.newHook(amurIO.sampleInterval, runInterval);
     tBeat.newHook(amurIO.sampleInterval, runHitter1);
     tBeat.newHook(amurIO.sampleInterval, runHitter2);
+    
+//    tBeat.newHook(5000, printRAM);
 
 
     tBeat.start();
@@ -94,8 +105,15 @@ void runHitter1(){
 void runHitter2(){
     hitter2.handleInterval();
 }
+void printRAM(){
+    Serial.println("FREE RAM:");
+    Serial.println(freeRam());
+}
 
 void loop() {
+    if(touchDriver.isPinUp(10)){
+        Serial.println("Touched 10");
+    }
     
     tBeat.exec();
     

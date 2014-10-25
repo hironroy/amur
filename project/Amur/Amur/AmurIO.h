@@ -10,8 +10,12 @@
 #define __Amur__AmurIO__
 
 #include <iostream>
-#include "StandardCplusplus.h"
 #include "Arduino.h"
+#include "StandardCplusplus.h"
+#include "AdafruitCapTouch.h"
+
+#include "tBeat.h"
+
 
 class AmurIO {
 public:
@@ -25,6 +29,7 @@ public:
     void pushTrigger(byte pincode);
     void lowTrigger(byte pincode);
     int readPin(byte pincode);
+    int readCap(byte pincode);
 
 private:
     //Inputs
