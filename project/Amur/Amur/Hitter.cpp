@@ -29,7 +29,7 @@ void Hitter::begin(int _hitDuration, byte _inputPin,  byte _outputPin){
 
 void Hitter::handleInterval(){
     
-    if(amurIO.readPin(inputPin) == LOW){
+    if(amurIO.readCap(inputPin)){
         doHit();
     }
     
