@@ -26,6 +26,8 @@ public:
     bool clearTriggered();
     bool isLoopPlaying();
     bool loopReset;
+    bool hasLoop;
+    bool clearLoops;
 private:
     void startLoopPlay();
     void updateLoop();
@@ -39,7 +41,6 @@ private:
     int clearPin;
     int timeSinceClearPress;
     bool isSettingLoop;
-    bool hasLoop;
     int loopBeatCount;
     int currentBeat;
     double loopPercentPlayed;

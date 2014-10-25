@@ -29,6 +29,11 @@ void Hitter::begin(int _hitDuration, byte _inputPin,  byte _outputPin){
 
 void Hitter::handleInterval(){
     
+    if(timeline.clearLoops){
+        Serial.println("Clear Loops");
+        recorder.wipe();
+    }
+    
     if(amurIO.readPin(inputPin) == LOW){
         doHit();
     }

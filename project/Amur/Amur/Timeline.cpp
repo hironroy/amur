@@ -28,6 +28,7 @@ Timeline::Timeline(int _startLockPin, int _clearPin){
 }
 
 void Timeline::handleInterval(){
+    clearLoops = false;
     //IO Related Logic
     if(startTriggered()){
         start();
@@ -102,6 +103,7 @@ void Timeline::lock(){
 void Timeline::clear(){
     hasLoop = false;
     loopBeatCount = 0;
+    clearLoops = true;
 }
 
 float Timeline::ratioComplete(){

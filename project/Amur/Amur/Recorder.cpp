@@ -13,8 +13,7 @@ Recorder::Recorder(){
 }
 
 void Recorder::begin(){
-    hits.push_back(0.00);
-    hits.push_back(0.50);
+    hits.push_back(-1.00);
     
     currentHitIndex = -1;
     newLoop = false;
@@ -24,6 +23,16 @@ void Recorder::begin(){
 
 bool Recorder::isRecording(){
     return timeline.isLoopPlaying();
+}
+
+bool Recorder::isEmpty(){
+    return hits.size() == 0;
+}
+
+void Recorder::wipe(){
+    hits.clear();
+    hits.push_back(-1.00);
+    newHits.clear();
 }
 
 void Recorder::recordHit(){
@@ -61,6 +70,7 @@ bool Recorder::intervalHasHit(){
     if(timeline.isLoopPlaying()){
         double ratio = timeline.ratioComplete();
         
+        
         if(currentHitIndex < 0 && timeline.loopReset){
             currentHitIndex = 0;
             saveNewHits();
@@ -69,7 +79,7 @@ bool Recorder::intervalHasHit(){
             return false;
         }
         
-        if(ratio >= hits[currentHitIndex]){
+        if(ratio >= hits[currentHitIndex] && hits[currentHitIndex] >= -1){
             
             if(currentHitIndex >= hits.size() - 1){
                 currentHitIndex = -1;

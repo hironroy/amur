@@ -22,8 +22,11 @@ public:
     bool isRecording();
     void recordHit();
     bool intervalHasHit();
+    bool isEmpty();
+    void wipe();
 private:
     std::vector<double> hits;
+    std::vector<double> backupHits;
     std::vector<double> newHits;
     int currentHitIndex;
     bool newLoop;
