@@ -41,5 +41,5 @@ Builds/AmurIO.o: AmurIO.cpp AmurIO.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/binary.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WCharacter.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/HardwareSerial.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/standard/pins_arduino.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/mega/pins_arduino.h \
   /Users/hironroy/Documents/Arduino/libraries/tBeat/tBeat.h
