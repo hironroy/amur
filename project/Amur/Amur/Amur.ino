@@ -40,6 +40,8 @@
 // Include application, user and local libraries
 #include "StandardCplusplus.h"
 #include "tBeat.h"
+
+#include "AdafruitCapTouch.h"
 #include "AmurIO.h"
 #include "Metronome.h"
 #include "Timeline.h"
@@ -47,30 +49,29 @@
 
 // Prototypes
 
-//Inputs
-//byte m_clear = 5;    //Master Clear button
-//byte m_rec = 6;      //Master Record
-//byte m_backout1 = 8; //Backout for Channel 1
-//byte m_backout2 = 11;//Backout for Channel 2
-
-
 Hitter hitter1;
 Hitter hitter2;
+Hitter hitter3;
+Hitter hitter4;
 
 void runInterval();
 void runHitter1();
 void runHitter2();
-
+void runHitter3();
+void runHitter4();
 
 
 void setup() {
     Serial.begin(9600);      // open the serial port at 9600 bps:
+    
+    touchDriver.begin();
     
     //hitters init
     
     // duration of hit (ms), input pin, output pin
     hitter1.begin(100, 10, 9);
     hitter2.begin(100, 13, 12);
+    hitter3.begin(100, 4, 3);
 
     tBeat.init();
     
@@ -78,7 +79,8 @@ void setup() {
     tBeat.newHook(amurIO.sampleInterval, runInterval);
     tBeat.newHook(amurIO.sampleInterval, runHitter1);
     tBeat.newHook(amurIO.sampleInterval, runHitter2);
-
+    tBeat.newHook(amurIO.sampleInterval, runHitter3);
+    tBeat.newHook(amurIO.sampleInterval, runHitter4);
 
     tBeat.start();
     
@@ -93,6 +95,12 @@ void runHitter1(){
 }
 void runHitter2(){
     hitter2.handleInterval();
+}
+void runHitter3(){
+    hitter3.handleInterval();
+}
+void runHitter4(){
+    hitter4.handleInterval();
 }
 
 void loop() {

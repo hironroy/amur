@@ -1,18 +1,4 @@
-Builds/main.o: main.cpp \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Arduino.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/binary.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WCharacter.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WString.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/HardwareSerial.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Stream.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Print.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Printable.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/new.h \
-  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/standard/pins_arduino.h \
-  Amur.ino \
-  /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/StandardCplusplus.h \
-  /Users/hironroy/Documents/Arduino/libraries/tBeat/tBeat.h \
-  AdafruitCapTouch.h \
+Builds/AdafruitCapTouch.o: AdafruitCapTouch.cpp AdafruitCapTouch.h \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/iostream \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/basic_definitions \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/system_configuration.h \
@@ -44,8 +30,18 @@ Builds/main.o: main.cpp \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/ostream_helpers \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/serstream \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/HardwareSerial.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Stream.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Print.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WString.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Printable.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/new.h \
   /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/string_iostream \
   /Applications/Arduino.app/Contents/Resources/Java/libraries/Wire/Wire.h \
   /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Stream.h \
   /Users/hironroy/Documents/Arduino/libraries/Adafruit_MPR121_Library/Adafruit_MPR121.h \
-  AmurIO.h Metronome.h Timeline.h Hitter.h Recorder.h
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/Arduino.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/binary.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/WCharacter.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/cores/arduino/HardwareSerial.h \
+  /Applications/Arduino.app/Contents/Resources/Java/hardware/arduino/variants/standard/pins_arduino.h \
+  /Users/hironroy/Documents/Arduino/libraries/StandardCplusplus/StandardCplusplus.h

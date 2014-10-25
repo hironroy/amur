@@ -24,14 +24,14 @@
 # ARDUINO = EEPROM Esplora Ethernet Firmata GSM 
 #	LiquidCrystal Robot_Control Robot_Motor SD 
 #
-APP_LIBS_LIST = 0
+APP_LIBS_LIST = Wire
 
 # List user's libraries here 
 # default = 0 = none
 #
 
 #
-USER_LIBS_LIST = tBeat StandardCplusplus
+USER_LIBS_LIST = tBeat StandardCplusplus Adafruit_MPR121_Library
 
 # List core, application and user's libraries to be excluded
 # For example, WiFi may crash on Arduino 1.0.2, Esplora on Arduino 1.0.3, Firmata on Teensy 3.0,

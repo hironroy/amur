@@ -297,6 +297,7 @@
 		F456760119F89609005C3FE8 /* Metronome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F45675FF19F89609005C3FE8 /* Metronome.cpp */; };
 		F4AD421819F87BF1005B699A /* tBeat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4AD421619F87BF1005B699A /* tBeat.cpp */; };
 		F4AD421C19F87D1D005B699A /* AmurIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4AD421A19F87D1D005B699A /* AmurIO.cpp */; };
+		F4FADB9719FB454E00E7E101 /* AdafruitCapTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4FADB9519FB454E00E7E101 /* AdafruitCapTouch.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -746,6 +747,12 @@
 		F4AD421719F87BF1005B699A /* tBeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tBeat.h; sourceTree = "<group>"; };
 		F4AD421A19F87D1D005B699A /* AmurIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AmurIO.cpp; sourceTree = "<group>"; };
 		F4AD421B19F87D1D005B699A /* AmurIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmurIO.h; sourceTree = "<group>"; };
+		F4FADB8F19FB436C00E7E101 /* Adafruit_MPR121.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Adafruit_MPR121.cpp; sourceTree = "<group>"; };
+		F4FADB9019FB436C00E7E101 /* Adafruit_MPR121.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adafruit_MPR121.h; sourceTree = "<group>"; };
+		F4FADB9319FB436C00E7E101 /* MPR121test.ino */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MPR121test.ino; sourceTree = "<group>"; };
+		F4FADB9419FB436C00E7E101 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F4FADB9519FB454E00E7E101 /* AdafruitCapTouch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdafruitCapTouch.cpp; sourceTree = "<group>"; };
+		F4FADB9619FB454E00E7E101 /* AdafruitCapTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdafruitCapTouch.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -1315,6 +1322,7 @@
 		F435000519F73E750014C238 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F4FADB8E19FB436C00E7E101 /* Adafruit_MPR121_Library */,
 				F4337E1719F9D26F006509FD /* StandardCplusplus */,
 				F4AD420F19F87BF1005B699A /* tBeat */,
 				F435000619F73E750014C238 /* readme.txt */,
@@ -1512,8 +1520,37 @@
 			children = (
 				F4AD421A19F87D1D005B699A /* AmurIO.cpp */,
 				F4AD421B19F87D1D005B699A /* AmurIO.h */,
+				F4FADB9519FB454E00E7E101 /* AdafruitCapTouch.cpp */,
+				F4FADB9619FB454E00E7E101 /* AdafruitCapTouch.h */,
 			);
 			name = Drivers;
+			sourceTree = "<group>";
+		};
+		F4FADB8E19FB436C00E7E101 /* Adafruit_MPR121_Library */ = {
+			isa = PBXGroup;
+			children = (
+				F4FADB8F19FB436C00E7E101 /* Adafruit_MPR121.cpp */,
+				F4FADB9019FB436C00E7E101 /* Adafruit_MPR121.h */,
+				F4FADB9119FB436C00E7E101 /* examples */,
+				F4FADB9419FB436C00E7E101 /* README.txt */,
+			);
+			path = Adafruit_MPR121_Library;
+			sourceTree = "<group>";
+		};
+		F4FADB9119FB436C00E7E101 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				F4FADB9219FB436C00E7E101 /* MPR121test */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		F4FADB9219FB436C00E7E101 /* MPR121test */ = {
+			isa = PBXGroup;
+			children = (
+				F4FADB9319FB436C00E7E101 /* MPR121test.ino */,
+			);
+			path = MPR121test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1915,6 +1952,7 @@
 				AA2A141021211605AA0000F9 /* Sd2Card.cpp in Sources */,
 				AA2A141021211605AA0000FA /* Sd2Card.h in Sources */,
 				AA2A141021211605AA0000FB /* Sd2PinMap.h in Sources */,
+				F4FADB9719FB454E00E7E101 /* AdafruitCapTouch.cpp in Sources */,
 				AA2A141021211605AA0000FC /* SdFat.h in Sources */,
 				AA2A141021211605AA0000FD /* SdFatmainpage.h in Sources */,
 				F4337EB619F9D26F006509FD /* queue.cpp in Sources */,
