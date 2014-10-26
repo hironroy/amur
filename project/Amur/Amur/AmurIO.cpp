@@ -14,7 +14,7 @@ void amurStopBlinkMetronome();
 
 AmurIO::AmurIO(){
     m_metronome = A0;
-    m_metronome_led = 7;
+    m_metronome_led = 8;
     pinMode(m_metronome_led, OUTPUT);
 
     //say that the sample interval is 8ms
