@@ -33,6 +33,7 @@ void Timeline::handleInterval(){
         start();
     }
     
+    clearLoopTriggered = false;
     if(clearTriggered()){
         clear();
     }
@@ -102,6 +103,7 @@ void Timeline::lock(){
 
 void Timeline::clear(){
     Serial.println("Clear Loop");
+    clearLoopTriggered = true;
     hasLoop = false;
     loopBeatCount = 0;
 }

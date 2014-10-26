@@ -62,9 +62,11 @@ void Hitter::handleInterval(){
             recorder.moveToNextHit();
         }
     }
-    
-    
 
+    if(timeline.clearLoopTriggered){
+        recorder.clearAll();
+    }
+    
 }
 
 // Is user inputting to the hitter?

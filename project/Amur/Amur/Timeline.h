@@ -26,6 +26,7 @@ public:
     bool clearTriggered();
     bool isLoopPlaying();
     bool loopReset;
+    bool clearLoopTriggered;
 private:
     void startLoopPlay();
     void updateLoop();

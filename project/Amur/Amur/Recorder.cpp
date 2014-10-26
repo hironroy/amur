@@ -34,6 +34,14 @@ void Recorder::recordHit(float ratio){
     }
 }
 
+void Recorder::clearAll(){
+
+    Serial.println("Recorder clear all hits");
+    hits.clear();
+    newHits.clear();
+    
+}
+
 void Recorder::resetLoop(){
     currentHitIndex = 0;
     saveNewHits();
