@@ -13,7 +13,7 @@ Recorder::Recorder(){
 }
 
 void Recorder::begin(){
-    currentHitIndex = -1;
+    currentHitIndex = 0;
     newLoop = false;
     maxNewHits = 50;
     maxLoopHits = 100;
@@ -35,6 +35,7 @@ void Recorder::recordHit(float ratio){
 }
 
 void Recorder::resetLoop(){
+    currentHitIndex = 0;
     saveNewHits();
 }
 
@@ -69,8 +70,23 @@ void Recorder::printNewHits(){
     }
 }
 
+void Recorder::moveToNextHit(){
+    if(currentHitIndex >= (hits.size() - 1)){
+        currentHitIndex = -1;
+    }
+    else{
+        currentHitIndex++;
+    }
+}
 bool Recorder::ratioHasHit(float ratio){
     //TODO implement check
+    
+    if(currentHitIndex >= 0){
+        if(!hits.empty()){
+            return hits.at(currentHitIndex) < ratio;
+        }
+    }
+
     return false;
 }
 

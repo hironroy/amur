@@ -26,6 +26,7 @@ public:
     bool intervalHasHit();
     void saveNewHits();
     void resetLoop();
+    void moveToNextHit();
     int maxNewHits;
     int maxLoopHits;
 private:
