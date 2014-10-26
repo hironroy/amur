@@ -42,7 +42,7 @@ private:
     bool hasLoop;
     int loopBeatCount;
     int currentBeat;
-    double loopPercentPlayed;
+    float loopPercentPlayed;
     
 };
 

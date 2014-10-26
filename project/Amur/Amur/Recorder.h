@@ -23,8 +23,8 @@ public:
     void recordHit();
     bool intervalHasHit();
 private:
-    std::vector<double> hits;
-    std::vector<double> newHits;
+    std::vector<float> hits;
+    std::vector<float> newHits;
     int currentHitIndex;
     bool newLoop;
     void saveNewHits();

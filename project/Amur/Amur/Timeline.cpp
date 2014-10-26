@@ -71,7 +71,7 @@ void Timeline::updateLoopPercentage(){
     //Now we calculate the % complete
     if(loopIsPlaying){
         int loopDuration = metronome.getCurrentDelay() * loopBeatCount;
-        double sampleDurationRatio = (double) amurIO.sampleInterval / (double)loopDuration;
+        float sampleDurationRatio = (float) amurIO.sampleInterval / (float)loopDuration;
         loopPercentPlayed += sampleDurationRatio;
     }
 }

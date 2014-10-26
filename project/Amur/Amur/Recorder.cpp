@@ -37,19 +37,19 @@ void Recorder::saveNewHits(){
     //merge hits & newHits, sort the new resultant hits.
     if(newHits.size() > 0){
         
-        std::vector<double> newAllHits(hits.size() + newHits.size());
+        std::vector<float> newAllHits(hits.size() + newHits.size());
         std::merge(hits.begin(), hits.end(),newHits.begin(), newHits.end(), newAllHits.begin());
 
 //        Serial.println("New Hits");
-//        for (std::vector<double>::iterator it=newHits.begin(); it!=newHits.end(); ++it)
+//        for (std::vector<float>::iterator it=newHits.begin(); it!=newHits.end(); ++it)
 //            Serial.println(*it);
 //        
 //        Serial.println("Old Hits");
-//        for (std::vector<double>::iterator it=hits.begin(); it!=hits.end(); ++it)
+//        for (std::vector<float>::iterator it=hits.begin(); it!=hits.end(); ++it)
 //            Serial.println(*it);
 //        
 //        Serial.println("Post Merge");
-//        for (std::vector<double>::iterator it=newAllHits.begin(); it!=newAllHits.end(); ++it)
+//        for (std::vector<float>::iterator it=newAllHits.begin(); it!=newAllHits.end(); ++it)
 //            Serial.println(*it);
 
         hits = newAllHits;
@@ -59,7 +59,7 @@ void Recorder::saveNewHits(){
 
 bool Recorder::intervalHasHit(){
     if(timeline.isLoopPlaying()){
-        double ratio = timeline.ratioComplete();
+        float ratio = timeline.ratioComplete();
         
         if(currentHitIndex < 0 && timeline.loopReset){
             currentHitIndex = 0;
