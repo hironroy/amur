@@ -23,7 +23,6 @@ public:
     bool isRecording();
     void recordHit(float ratio);
     bool ratioHasHit(float ratio);
-    bool intervalHasHit();
     void saveNewHits();
     void resetLoop();
     void moveToNextHit();

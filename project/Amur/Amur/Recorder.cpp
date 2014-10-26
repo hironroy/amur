@@ -89,37 +89,3 @@ bool Recorder::ratioHasHit(float ratio){
 
     return false;
 }
-
-bool Recorder::intervalHasHit(){
-    if(timeline.isLoopPlaying() && !hits.empty()){
-        
-        float ratio = timeline.ratioComplete();
-        
-        if(currentHitIndex < 0 && timeline.loopReset){
-            currentHitIndex = 0;
-            saveNewHits();
-        }
-        else if(currentHitIndex< 0){
-            return false;
-        }
-        
-        if(ratio >= hits[currentHitIndex]){
-            
-            if(currentHitIndex >= hits.size() - 1){
-                currentHitIndex = -1;
-            }
-            else{
-                currentHitIndex = currentHitIndex + 1;
-            }
-            
-            Serial.println("Trigger Recorded Hit");
-            return true;
-            
-        }else{
-            return false;
-        }
-    }
-   else{
-       return false;
-   }
-}
