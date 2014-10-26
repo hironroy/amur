@@ -1,3 +1,7 @@
+#include <Adafruit_MPR121.h>
+
+//#include <Arduino.h> //needed for Serial.println
+
 //
 //  AdafruitCapTouch.h
 //  Amur
@@ -8,11 +12,6 @@
 
 #ifndef __Amur__AdafruitCapTouch__
 #define __Amur__AdafruitCapTouch__
-
-#include <iostream>
-#include <Wire.h>
-#include "Adafruit_MPR121.h"
-#include "StandardCplusplus.h"
 
 
 class AdafruitCapTouch {

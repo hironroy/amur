@@ -9,10 +9,10 @@
 #ifndef __Amur__Timeline__
 #define __Amur__Timeline__
 
-#include <iostream>
-#include "StandardCplusplus.h"
+#include "Arduino.h"
 #include "AmurIO.h"
 #include "Metronome.h"
+
 
 class Timeline{
 public:

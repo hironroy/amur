@@ -8,10 +8,9 @@
 
 #ifndef __Amur__Metronome__
 #define __Amur__Metronome__
-
-#include <iostream>
 #include "AmurIO.h"
-#include "StandardCplusplus.h"
+#include "Arduino.h"
+#include "tBeat.h"
 
 class Metronome {
 public:

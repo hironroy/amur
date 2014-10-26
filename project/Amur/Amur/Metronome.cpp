@@ -7,7 +7,6 @@
 //
 
 #include "Metronome.h"
-#include "tBeat.h"
 
 //Init with min and max BPM's
 Metronome metronome(40, 240);

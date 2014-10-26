@@ -8,14 +8,9 @@
 
 #ifndef __Amur__AmurIO__
 #define __Amur__AmurIO__
-
-#include <iostream>
 #include "Arduino.h"
-#include "StandardCplusplus.h"
 #include "AdafruitCapTouch.h"
-
 #include "tBeat.h"
-
 
 class AmurIO {
 public:

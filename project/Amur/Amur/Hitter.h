@@ -8,10 +8,9 @@
 
 #ifndef __Amur__Hitter__
 #define __Amur__Hitter__
-
-#include <iostream>
-#include "StandardCplusplus.h"
+#include "Arduino.h"
 #include "AmurIO.h"
+#include "Timeline.h"
 #include "Recorder.h"
 
 class Hitter {

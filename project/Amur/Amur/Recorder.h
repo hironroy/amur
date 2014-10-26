@@ -9,9 +9,9 @@
 #ifndef __Amur__Recorder__
 #define __Amur__Recorder__
 
-#include <iostream>
+#include "Arduino.h"
 #include "StandardCplusplus.h"
-#include "AmurIO.h"
+#include <vector>
 #include "Timeline.h"
 
 class Recorder {
@@ -28,8 +28,8 @@ public:
     void saveNewHits();
     void resetLoop();
     void moveToNextHit();
-    int maxNewHits;
-    int maxLoopHits;
+    unsigned int maxNewHits;
+    unsigned int maxLoopHits;
 private:
     std::vector<float> hits;
     std::vector<float> newHits;
