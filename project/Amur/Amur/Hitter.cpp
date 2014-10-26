@@ -57,7 +57,6 @@ void Hitter::handleInterval(){
             }
         }
         else if(timeline.isLoopPlaying() && recorder.ratioHasHit(currentRatio)){
-            Serial.println("Recorded Hit Play");
             doHit();
             recorder.moveToNextHit();
         }
