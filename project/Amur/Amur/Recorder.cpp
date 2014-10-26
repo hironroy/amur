@@ -35,16 +35,12 @@ void Recorder::recordHit(float ratio){
 }
 
 void Recorder::clearAll(){
-
-    Serial.println("Recorder clear all hits");
     hits.clear();
     newHits.clear();
-    
 }
 
 //wipe the new hits
 void Recorder::bail(){
-    Serial.println("Recorder bail");
     newHits.clear();
 }
 

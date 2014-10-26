@@ -30,22 +30,10 @@
 #include "Recorder.h"
 #include "Hitter.h"
 
-
-// Prototypes
-
-//Inputs
-//byte m_clear = 5;    //Master Clear button
-//byte m_rec = 6;      //Master Record
-//byte m_backout1 = 8; //Backout for Channel 1
-//byte m_backout2 = 11;//Backout for Channel 2
-
-
 Hitter hitter1;
 Hitter hitter2;
-//Hitter hitter3;
-//Hitter hitter4;
-
-//Hitter hitter2;
+Hitter hitter3;
+Hitter hitter4;
 
 void runInterval();
 void runHitters();
@@ -67,7 +55,10 @@ void setup() {
     
     // duration of hit (ms), input pin, output pin
     hitter1.begin(80, 80, 3, 9);
-    hitter2.begin(80, 80, 4, 12);
+    hitter2.begin(80, 80, 4, 10);
+    hitter3.begin(80, 80, 5, 11);
+    hitter4.begin(80, 80, 6, 12);
+
 //    hitter1.begin(80, 80, 5, 11);
 //    hitter1.begin(80, 80, 6, 12);
 
@@ -78,10 +69,8 @@ void setup() {
     //All of the actuators get triggered at the sample interval
     tBeat.newHook(amurIO.sampleInterval, runInterval);
     tBeat.newHook(amurIO.sampleInterval, runHitters);
-//    tBeat.newHook(amurIO.sampleInterval, runHitter2);
     
 //    tBeat.newHook(5000, printRAM);
-
 
     tBeat.start();
     
@@ -94,6 +83,8 @@ void runInterval(){
 void runHitters(){
     hitter1.handleInterval();
     hitter2.handleInterval();
+    hitter3.handleInterval();
+    hitter4.handleInterval();
 }
 
 void printRAM(){
