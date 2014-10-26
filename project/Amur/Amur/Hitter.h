@@ -17,19 +17,23 @@
 class Hitter {
 public:
     Hitter();
-    void begin(int _hitDuration, byte _inputPin, byte _outputPin);
+    void begin(int _hitDuration, int _reboundDuration, byte _inputPin, byte _outputPin);
     void doHit();
     void handleInterval();
 private:
     bool isDoingHit;
     int hitDuration;
+    int reboundDuration;
     bool newHit;
     byte outputPin;
     byte inputPin;
     int msSinceLastHit;
     Recorder recorder;
-    void routeHitToRecorder();
-    void actuateHit();
+    bool userPressing();
+    void updateOneHitStatus();
+    void resetOneHit();
+//    void routeHitToRecorder();
+//    void actuateHit();
 
 };
 

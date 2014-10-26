@@ -78,7 +78,7 @@ void setup() {
     //hitters init
     
     // duration of hit (ms), input pin, output pin
-    hitter1.begin(100, 8, 9);
+    hitter1.begin(80, 80, 8, 9);
 //    hitter2.begin(100, 13, 12);
 
     tBeat.init();

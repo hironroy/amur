@@ -13,13 +13,8 @@ Recorder::Recorder(){
 }
 
 void Recorder::begin(){
-    hits.push_back(0.00);
-    hits.push_back(0.50);
-    
     currentHitIndex = -1;
     newLoop = false;
-    
-    Serial.println(hits.size());
 }
 
 bool Recorder::isRecording(){
@@ -35,8 +30,7 @@ void Recorder::recordHit(){
 
 void Recorder::saveNewHits(){
     //merge hits & newHits, sort the new resultant hits.
-    if(newHits.size() > 0){
-        
+    if(!newHits.empty()){
         std::vector<float> newAllHits(hits.size() + newHits.size());
         std::merge(hits.begin(), hits.end(),newHits.begin(), newHits.end(), newAllHits.begin());
 
@@ -58,7 +52,8 @@ void Recorder::saveNewHits(){
 }
 
 bool Recorder::intervalHasHit(){
-    if(timeline.isLoopPlaying()){
+    if(timeline.isLoopPlaying() && !hits.empty()){
+        
         float ratio = timeline.ratioComplete();
         
         if(currentHitIndex < 0 && timeline.loopReset){
