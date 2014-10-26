@@ -65,6 +65,8 @@ void Hitter::handleInterval(){
 
     if(timeline.clearLoopTriggered){
         recorder.clearAll();
+    }else if(timeline.bailLoopTriggered){
+        recorder.bail();
     }
     
 }

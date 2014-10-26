@@ -42,6 +42,12 @@ void Recorder::clearAll(){
     
 }
 
+//wipe the new hits
+void Recorder::bail(){
+    Serial.println("Recorder bail");
+    newHits.clear();
+}
+
 void Recorder::resetLoop(){
     currentHitIndex = 0;
     saveNewHits();

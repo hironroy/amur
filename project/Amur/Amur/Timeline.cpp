@@ -8,17 +8,19 @@
 
 #include "Timeline.h"
 
-Timeline timeline(10,11);
+Timeline timeline(10,11, 9);
 
 
-Timeline::Timeline(int _startLockPin, int _clearPin){
+Timeline::Timeline(int _startLockPin, int _clearPin, int _bailPin){
     startLockPin = _startLockPin;
     clearPin = _clearPin;
+    bailPin = _bailPin;
     
     pinMode(startLockPin, INPUT);
     pinMode(clearPin, INPUT);
     
     timeSinceClearPress = 0;
+    timeSinceBailPress = 0;
     timeSinceStartPress = 0;
     
     hasLoop = false;
@@ -36,6 +38,12 @@ void Timeline::handleInterval(){
     clearLoopTriggered = false;
     if(clearTriggered()){
         clear();
+    }
+    
+    bailLoopTriggered = false;
+    if(bailTriggered()){
+        Serial.println("Bail Triggered");
+        bailLoopTriggered = true;
     }
     
     updateLoop();
@@ -131,6 +139,25 @@ bool Timeline::startTriggered(){
     }
     else if(timeSinceStartPress > 0){
         timeSinceStartPress += amurIO.sampleInterval;
+        return false;
+    }
+    else{
+        return false;
+    }
+}
+
+bool Timeline::bailTriggered(){
+    
+    if(timeSinceBailPress == 0 && amurIO.readCap(bailPin)){
+        timeSinceBailPress += amurIO.sampleInterval;
+        return true;
+    }
+    else if(timeSinceBailPress >= amurIO.debounceDuration){
+        timeSinceBailPress = 0;
+        return false;
+    }
+    else if(timeSinceBailPress > 0){
+        timeSinceBailPress += amurIO.sampleInterval;
         return false;
     }
     else{

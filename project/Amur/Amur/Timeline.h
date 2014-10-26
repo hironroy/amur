@@ -16,7 +16,7 @@
 
 class Timeline{
 public:
-    Timeline(int _startLockPin, int _clearPin);
+    Timeline(int _startLockPin, int _clearPin, int _bailPin);
     void handleInterval();
     void start();
     void lock();
@@ -24,9 +24,12 @@ public:
     float ratioComplete();
     bool startTriggered();
     bool clearTriggered();
+    bool bailTriggered();
     bool isLoopPlaying();
     bool loopReset;
     bool clearLoopTriggered;
+    bool bailLoopTriggered;
+
 private:
     void startLoopPlay();
     void updateLoop();
@@ -39,6 +42,10 @@ private:
     int timeSinceStartPress;
     int clearPin;
     int timeSinceClearPress;
+    
+    int bailPin;
+    int timeSinceBailPress;
+    
     bool isSettingLoop;
     bool hasLoop;
     int loopBeatCount;
