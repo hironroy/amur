@@ -46,11 +46,15 @@ private:
     int bailPin;
     int timeSinceBailPress;
     
+    int timeSinceLoopDefStart;
+    
     bool isSettingLoop;
     bool hasLoop;
     int loopBeatCount;
     int currentBeat;
     float loopPercentPlayed;
+    
+    int maxLoopLength;
     
 };
 
