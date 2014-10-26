@@ -40,17 +40,17 @@ void Recorder::saveNewHits(){
         std::vector<double> newAllHits(hits.size() + newHits.size());
         std::merge(hits.begin(), hits.end(),newHits.begin(), newHits.end(), newAllHits.begin());
 
-        Serial.println("New Hits");
-        for (std::vector<double>::iterator it=newHits.begin(); it!=newHits.end(); ++it)
-            Serial.println(*it);
-        
-        Serial.println("Old Hits");
-        for (std::vector<double>::iterator it=hits.begin(); it!=hits.end(); ++it)
-            Serial.println(*it);
-        
-        Serial.println("Post Merge");
-        for (std::vector<double>::iterator it=newAllHits.begin(); it!=newAllHits.end(); ++it)
-            Serial.println(*it);
+//        Serial.println("New Hits");
+//        for (std::vector<double>::iterator it=newHits.begin(); it!=newHits.end(); ++it)
+//            Serial.println(*it);
+//        
+//        Serial.println("Old Hits");
+//        for (std::vector<double>::iterator it=hits.begin(); it!=hits.end(); ++it)
+//            Serial.println(*it);
+//        
+//        Serial.println("Post Merge");
+//        for (std::vector<double>::iterator it=newAllHits.begin(); it!=newAllHits.end(); ++it)
+//            Serial.println(*it);
 
         hits = newAllHits;
         newHits.clear();
@@ -78,7 +78,7 @@ bool Recorder::intervalHasHit(){
                 currentHitIndex = currentHitIndex + 1;
             }
             
-            
+            Serial.println("Trigger Recorded Hit");
             return true;
             
         }else{

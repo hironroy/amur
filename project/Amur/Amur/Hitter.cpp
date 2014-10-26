@@ -34,6 +34,7 @@ void Hitter::handleInterval(){
     }
     
     if(newHit || (recorder.intervalHasHit() && !isDoingHit)){
+        Serial.println("Output Hit");
         actuateHit();
     }
     else if(isDoingHit){

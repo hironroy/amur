@@ -111,11 +111,6 @@ void printRAM(){
 }
 
 void loop() {
-    if(touchDriver.isPinUp(10)){
-        Serial.println("Touched 10");
-    }
-    
     tBeat.exec();
-    
 }
 

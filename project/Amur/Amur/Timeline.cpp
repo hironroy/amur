@@ -87,6 +87,7 @@ void Timeline::resetLoop(){
 void Timeline::start(){
     if(!isSettingLoop && !hasLoop){
         isSettingLoop = true;
+        Serial.println("Start setting loop");
     }
     else if(isSettingLoop){
         lock();
@@ -100,6 +101,7 @@ void Timeline::lock(){
 }
 
 void Timeline::clear(){
+    Serial.println("Clear Loop");
     hasLoop = false;
     loopBeatCount = 0;
 }
