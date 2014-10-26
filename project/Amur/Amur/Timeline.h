@@ -55,6 +55,7 @@ private:
     float loopPercentPlayed;
     
     int maxLoopLength;
+    int defaultBeatCount;
     
 };
 

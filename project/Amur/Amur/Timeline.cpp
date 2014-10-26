@@ -29,6 +29,7 @@ Timeline::Timeline(int _startLockPin, int _clearPin, int _bailPin){
     loopPercentPlayed = 0.0;
     
     maxLoopLength = 8000;
+    defaultBeatCount = 4;
 }
 
 void Timeline::handleInterval(){
@@ -37,6 +38,7 @@ void Timeline::handleInterval(){
         timeSinceLoopDefStart += amurIO.sampleInterval;
         if(timeSinceLoopDefStart > maxLoopLength){
             lock();
+            loopBeatCount = defaultBeatCount;
             timeSinceLoopDefStart = 0;
         }
     }
@@ -76,7 +78,6 @@ void Timeline::updateLoop(){
             resetLoop();
         }
         currentBeat += 1;
-
         
     }
     
@@ -115,7 +116,11 @@ void Timeline::start(){
 }
 
 void Timeline::lock(){
+    if(loopBeatCount == 0){
+        loopBeatCount = defaultBeatCount;
+    }
     Serial.println("Loop Length Set");
+    
     isSettingLoop = false;
     hasLoop = true;
 
