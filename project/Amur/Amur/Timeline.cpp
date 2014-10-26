@@ -29,7 +29,7 @@ Timeline::Timeline(int _startLockPin, int _clearPin, int _bailPin){
     loopPercentPlayed = 0.0;
     
     maxLoopLength = 8000;
-    defaultBeatCount = 4;
+    defaultBeatCount = 2;
 }
 
 void Timeline::handleInterval(){
@@ -72,6 +72,10 @@ void Timeline::updateLoop(){
     }
     else if (metronome.isBeatInterval && hasLoop) {
         loopIsPlaying = true;
+        if(loopBeatCount == 0){
+             Serial.println("Loop Beat too low. Setting to default."); 
+             loopBeatCount = defaultBeatCount;
+        }
         
         //update the current beat
         if(currentBeat == loopBeatCount || currentBeat < 0){
@@ -116,10 +120,8 @@ void Timeline::start(){
 }
 
 void Timeline::lock(){
-    if(loopBeatCount == 0){
-        loopBeatCount = defaultBeatCount;
-    }
     Serial.println("Loop Length Set");
+    Serial.println(loopBeatCount);
     
     isSettingLoop = false;
     hasLoop = true;
