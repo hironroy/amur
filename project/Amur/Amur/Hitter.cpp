@@ -42,14 +42,23 @@ void Hitter::handleInterval(){
         // increment the the msSinceHitStarted
         // if the msSinceHitStarted is exceeded -- push trigger down & msSinceHitStarted = 0
     
+    if(timeline.loopReset){
+        recorder.resetLoop();
+    }
     
     updateOneHitStatus();
     if(!isDoingHit){
         if(userPressing()){
             doHit();
+            float currentRatio = timeline.ratioComplete();
+            if(timeline.isLoopPlaying() && !recorder.ratioHasHit(currentRatio)){
+                recorder.recordHit(currentRatio);
+            }
         }
     }
     
+    
+
 }
 
 // Is user inputting to the hitter?
