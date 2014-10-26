@@ -41,10 +41,14 @@
 
 
 Hitter hitter1;
+Hitter hitter2;
+//Hitter hitter3;
+//Hitter hitter4;
+
 //Hitter hitter2;
 
 void runInterval();
-void runHitter1();
+void runHitters();
 //void runHitter2();
 void printRAM();
 
@@ -62,14 +66,18 @@ void setup() {
     //hitters init
     
     // duration of hit (ms), input pin, output pin
-    hitter1.begin(80, 80, 8, 9);
+    hitter1.begin(80, 80, 3, 9);
+    hitter2.begin(80, 80, 4, 12);
+//    hitter1.begin(80, 80, 5, 11);
+//    hitter1.begin(80, 80, 6, 12);
+
 //    hitter2.begin(100, 13, 12);
 
     tBeat.init();
     
     //All of the actuators get triggered at the sample interval
     tBeat.newHook(amurIO.sampleInterval, runInterval);
-    tBeat.newHook(amurIO.sampleInterval, runHitter1);
+    tBeat.newHook(amurIO.sampleInterval, runHitters);
 //    tBeat.newHook(amurIO.sampleInterval, runHitter2);
     
 //    tBeat.newHook(5000, printRAM);
@@ -83,12 +91,11 @@ void runInterval(){
     amurMetronomeHandleInterval();
     timeline.handleInterval();
 }
-void runHitter1(){
+void runHitters(){
     hitter1.handleInterval();
+    hitter2.handleInterval();
 }
-//void runHitter2(){
-//    hitter2.handleInterval();
-//}
+
 void printRAM(){
     Serial.println("FREE RAM:");
     Serial.println(freeRam());

@@ -8,7 +8,7 @@
 
 #include "Timeline.h"
 
-Timeline timeline(10,11, 9);
+Timeline timeline(0, 1, 2);
 
 
 Timeline::Timeline(int _startLockPin, int _clearPin, int _bailPin){
