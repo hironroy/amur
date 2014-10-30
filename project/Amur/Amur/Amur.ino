@@ -53,7 +53,8 @@ void setup() {
     touchDriver.begin();
     //hitters init
     
-    // duration of hit (ms), input pin, output pin
+    // TODO: Set Cap Pin Assignments
+    // duration of hit (ms), input (CAP) pin, output pin
     hitter1.begin(80, 80, 3, 9);
     hitter2.begin(80, 80, 4, 10);
     hitter3.begin(80, 80, 5, 11);

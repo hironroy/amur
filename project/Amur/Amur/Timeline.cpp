@@ -9,8 +9,7 @@
 #include "Timeline.h"
 
 Timeline timeline(0, 1, 2);
-
-
+// TODO: Set Cap Pin Assignments
 Timeline::Timeline(int _startLockPin, int _clearPin, int _bailPin){
     startLockPin = _startLockPin;
     clearPin = _clearPin;
