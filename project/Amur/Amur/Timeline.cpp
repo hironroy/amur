@@ -131,8 +131,11 @@ void Timeline::lock(){
 void Timeline::clear(){
     Serial.println("Clear Loop");
     clearLoopTriggered = true;
+    
     hasLoop = false;
     loopBeatCount = 0;
+    currentBeat = -1;
+    loopPercentPlayed = 0.0;
 }
 
 float Timeline::ratioComplete(){
