@@ -51,13 +51,15 @@ void Hitter::handleInterval(){
         float currentRatio = timeline.ratioComplete();
 
         if(userPressing()){
+          Serial.println("User Pressing Hit");
             doHit();
             if(timeline.isLoopPlaying() && !recorder.ratioHasHit(currentRatio)){
                 recorder.recordHit(currentRatio);
             }
         }
         else if(timeline.isLoopPlaying() && recorder.ratioHasHit(currentRatio)){
-            doHit();
+          Serial.println("Recorder Init'd Hit");  
+          doHit();
             recorder.moveToNextHit();
         }
     }

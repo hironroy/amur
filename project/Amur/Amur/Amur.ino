@@ -49,8 +49,10 @@ int freeRam ()
 
 
 void setup() {
+    delay(5000);
     Serial.begin(9600);      // open the serial port at 9600 bps:
     touchDriver.begin();
+  
     //hitters init
     
     // duration of hit (ms), input pin, output pin

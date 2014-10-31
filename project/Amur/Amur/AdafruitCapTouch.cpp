@@ -22,6 +22,7 @@ void AdafruitCapTouch::begin(){
         while (1);
     }
     Serial.println("MPR121 found!");
+    touchAPI.setThreshholds(100, 100);
 }
 
 int AdafruitCapTouch::isPinUp(int pincode){

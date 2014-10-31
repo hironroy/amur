@@ -30,6 +30,8 @@ Timeline::Timeline(int _startLockPin, int _clearPin, int _bailPin){
     
     maxLoopLength = 8000;
     defaultBeatCount = 2;
+    
+    isSettingLoop = false;
 }
 
 void Timeline::handleInterval(){
